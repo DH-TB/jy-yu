@@ -1,0 +1,55 @@
+.cardWrap {
+  max-height: calc(100vh - 80px);
+  overflow: scroll;
+  position: relative;
+
+  .songCard {
+    border-radius: 36px;
+    width: calc((100vw - 90px)/2);
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+    color: white;
+  }
+
+  .songBackground {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .songCardText {
+    width: calc((100vw - 80px)/2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 360px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .text {
+    padding: 16px;
+    width: calc(42vw - 32px);
+    white-space: break-spaces;
+  }
+
+  .otherSongCard {
+    width: calc(100vw - 48px);
+    height: fit-content;
+    border-radius: 24px;
+  }
+
+  .otherSongTitle {
+    font-size: 30px;
+    white-space: break-spaces;
+    padding: 16px;
+  }
+
+  .otherSongText {
+    white-space: break-spaces;
+    padding: 0 20rpx 20px 12px;
+  }
+}

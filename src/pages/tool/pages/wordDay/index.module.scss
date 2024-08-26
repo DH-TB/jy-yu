@@ -1,0 +1,36 @@
+.swiper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dailyWrap {
+    height: 80vh;
+    width: calc(100vw - 130px);
+    margin-top: 4vh;
+    border-radius: 50px;
+    box-shadow: 30px 30px 30px -20px rgba(0, 0, 0, 0.15),
+      inset 15px 15px 10px rgba(255, 255, 255, 0.75),
+      -15px -15px 35px rgba(255, 255, 255, 0.55),
+      inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .image {
+    width: calc(100vw - 130px);
+    height: 56vh;
+    border-radius: 50px 50px 0 0;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 36rpx;
+    padding: 54px 36px;
+    color: #e03838;
+  }
+
+  .tip {
+    color: #ee897f;
+    text-align: right;
+    padding-right: 36px;
+  }
+}
