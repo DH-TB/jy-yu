@@ -1,21 +1,17 @@
-import {useEffect, useState} from 'react'
+import { useEffect } from 'react'
 import Taro from '@tarojs/taro'
-import {View, Image, Text} from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import styles from './index.module.scss'
 import q1 from './image/q1.jpeg'
 import q2 from './image/q2.jpeg'
 import q3 from './image/q3.jpeg'
 import q4 from './image/q4.jpeg'
 import image from './image/q.jpg'
-import person1 from './image/person1.jpeg'
+import person from './image/person1.jpeg'
 import person2 from './image/person2.jpeg'
 import qr from './image/qr.jpeg'
-import qr1 from './image/qr1.svg'
-import text from './image/text.png'
-import song from './image/song.png'
 
 import cx from 'classnames'
-import {AtIcon} from "taro-ui";
 
 const links = [
   {
@@ -50,8 +46,6 @@ const links = [
 
 
 function Person() {
-  const [showFront, setShowFront] = useState(true)
-
   useEffect(() => {
     const audio = Taro.createInnerAudioContext();
     audio.src = ''; // 替换为你的音频地址
@@ -91,56 +85,30 @@ function Person() {
       appId: 'wx9074de28009e1111',
       path: `pages/index/index?blog_id=${item.path}`,
       // path: 'pages/index/index?blog_id=5067034822709591',
-      success(res) {
-      }
+      success(res) { }
     })
   }
 
   return (
     <View className={styles.home}>
-      <View className={styles.songWrap}>
-        <View className={styles.songInfo}>
-          <Image src={song} className={styles.songIcon}/>
-          <View className={styles.song}>
-            <View className={styles.songText}>没有办法 拿你没有办法</View>
-            <View className={styles.songName}>7EVNVEN/没有办法<Text className={styles.original}>原创</Text></View>
-          </View>
-        </View>
-        <View className={styles.songProcessWrap}>
-          01:03
-          <View className={styles.songProcess}>
-            <View className={styles.process}></View>
-          </View>
-          03:07
-        </View>
-        <View className={styles.playIconWrap}>
-          <View className='at-icon at-icon-prev'></View>
-          <View className={cx(styles.playIcon, 'at-icon at-icon-play')}></View>
-          <View className='at-icon at-icon-next'></View>
-        </View>
+      <View className={styles.personInfo}>
+        <Image src={person} className={styles.person} />
       </View>
-      <View className={cx(styles.personInfo, showFront && styles.active)} onClick={() => setShowFront(!showFront)}>
-        <Image src={person1} className={cx(styles.person, styles.person1)}/>
-        <Image src={person2} className={cx(styles.person, styles.person2)}/>
-      </View>
-      <View className={styles.info}>
-        <Image src={image} className={styles.icon}/>
-        <View className={styles.typing}>欢迎来到比比芭比啵比星球</View>
-      </View>
-      <View className={styles.cardContainer}>
+       {/* <View className={styles.info}>
+          <Image src={image} className={styles.icon} />
+          欢迎来到比比芭比啵比星球
+        </View> */}
+      <View className={styles.personInfo1}>
+        <View className={styles.background}></View>
         <View className={styles.cardWrap}>
           {links.map((item, index) =>
-            <View className={cx(styles.card)} onClick={() => jump(item, index)}>
-              <Image src={item.image} className={styles.cardImage}/>
+            <View className={cx(styles.card, styles.lightCard)} onClick={() => jump(item, index)}>
+              <Image src={item.image} className={styles.cardImage} />
               <View>{item.value}</View>
             </View>
           )}
         </View>
-        <View className={styles.qrIconWrap}>
-          <Image src={qr1} className={styles.qrIcon}/>
-          <Image src={text} className={styles.text}/>
-          <Image src={qr} className={styles.qrIcon}/>
-        </View>
+        {/* <Image src={qr} className={styles.qrIcon} /> */}
       </View>
     </View>
   )
