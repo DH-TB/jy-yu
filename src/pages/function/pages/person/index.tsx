@@ -7,15 +7,11 @@ import q2 from './image/q2.jpeg'
 import q3 from './image/q3.jpeg'
 import q4 from './image/q4.jpeg'
 import image from './image/q.jpg'
-import person1 from './image/person1.jpeg'
-import person2 from './image/person2.jpeg'
 import qr from './image/qr.jpeg'
 import qr1 from './image/qr1.svg'
 import text from './image/text.png'
 import song from './image/song.png'
-
 import cx from 'classnames'
-import {AtIcon} from "taro-ui";
 
 const links = [
   {
@@ -35,7 +31,7 @@ const links = [
   },
   {
     image: q4,
-    value: '【煜情骨纵】',
+    value: '煜情骨纵',
     path: '1753403670'
   },
   // value: '【TOP歌曲】'
@@ -105,6 +101,13 @@ function Person() {
             <View className={styles.songText}>没有办法 拿你没有办法</View>
             <View className={styles.songName}>7EVNVEN/没有办法<Text className={styles.original}>原创</Text></View>
           </View>
+          <View className={styles.box}>
+            <View className={styles.p}></View>
+            <View className={styles.p}></View>
+            <View className={styles.p}></View>
+            <View className={styles.p}></View>
+            <View className={styles.p}></View>
+          </View>
         </View>
         <View className={styles.songProcessWrap}>
           01:03
@@ -120,12 +123,18 @@ function Person() {
         </View>
       </View>
       <View className={cx(styles.personInfo, showFront && styles.active)} onClick={() => setShowFront(!showFront)}>
-        <Image src={person1} className={cx(styles.person, styles.person1)}/>
-        <Image src={person2} className={cx(styles.person, styles.person2)}/>
+        <Image
+          src={"https://wx2.sinaimg.cn/large/005SF7JFly1ht3ksydjfvj30uu0ho77c.jpg"}
+          className={cx(styles.person, styles.person1)}
+        />
+        <Image
+          src={"https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg"}
+          className={cx(styles.person, styles.person2)}
+        />
       </View>
       <View className={styles.info}>
         <Image src={image} className={styles.icon}/>
-        <View className={styles.typing}>欢迎来到比比芭比啵比星球</View>
+        <View className={styles.typing}>欢迎来到比比芭比啵比星球...</View>
       </View>
       <View className={styles.cardContainer}>
         <View className={styles.cardWrap}>

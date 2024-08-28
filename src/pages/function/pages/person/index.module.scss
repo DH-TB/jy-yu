@@ -1,6 +1,6 @@
 
 .home {
-  background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+  background-image: linear-gradient(to top, rgba(#ebbba7, 0.5) 0%, rgba(#eb9fb9, 0.5) 100%);
   backdrop-filter: blur(2);
   height: 100%;
   padding: 24px;
@@ -16,6 +16,7 @@
   .songInfo {
     display: flex;
     align-items: center;
+
     .songIcon {
       height: 100px;
       width: 100px;
@@ -35,6 +36,7 @@
     }
 
     .song {
+      flex: 1;
       margin: 24px 24px 0 24px;
     }
 
@@ -55,7 +57,7 @@
       padding: 1px 8px;
       border-radius: 12px;
       margin-left: 12px;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -71,14 +73,14 @@
   .songProcess {
     flex: 1;
     height: 16px;
-    border-radius: 25px;
+    border-radius: 24px;
     background: rgba(255, 255, 255, 0.3);
     margin: 0 24px;
 
     .process {
       width: 100px;
       height: inherit;
-      border-radius: 25px 0 0 25px;
+      border-radius: 24px 0 0 24px;
       background: #f2f2f2;
     }
   }
@@ -120,12 +122,10 @@
     }
 
     .person1 {
-      background: url("./image/person1.jpeg");
       z-index: 2;
     }
 
     .person2 {
-      background: url("./image/person2.jpeg");
       transform: rotateY(-180deg);
     }
   }
@@ -180,13 +180,14 @@
     margin: 36px 2px;
     background-color: #ffffff;
     border-radius: 16px;
-    color: #666;
+    color: #eb9fb9;
     padding: 8px 24px;
     box-shadow: inset 4px 4px 8px #d6d6d6, inset -4px -4px 8px #ffffff;
 
     .icon {
       height: 60px;
       width: 60px;
+      margin-right: 24px;
     }
 
     .typing {
@@ -236,6 +237,88 @@
       flex: 1;
       margin-top: 24px;
       height: 120px;
+    }
+  }
+}
+
+
+.box {
+  width: 40px;
+  height: 26px;
+  display: flex;
+  transform: rotateX(180deg);
+  justify-content: space-between;
+  margin-bottom: 42px;
+  margin-right: 24px;
+
+  .p {
+    width: 6px;
+    background: #fff;
+    border-radius: 24px;
+  }
+
+  .p:first-child {
+    animation: move1 2s ease infinite;
+    animation-delay: .1s;
+  }
+
+  .p:nth-of-type(2) {
+    animation: move2 2s ease infinite;
+    animation-delay: .3s;
+  }
+
+  .p:nth-of-type(3) {
+    animation: move3 2s ease infinite;
+    animation-delay: .5s;
+  }
+
+  .p:nth-of-type(4) {
+    animation: move2 2s ease infinite;
+    animation-delay: .7s;
+  }
+
+  .p:nth-of-type(5) {
+    animation: move1 2s ease infinite;
+    animation-delay: .7s;
+  }
+
+  @keyframes move1 {
+    0% {
+      height: 5px;
+    }
+
+    50% {
+      height: 10px;
+    }
+
+    100% {
+      height: 5px;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      height: 10px;
+    }
+
+    50% {
+      height: 20px;
+    }
+
+    100% {
+      height: 10px;
+    }
+  }
+  @keyframes move3 {
+    0% {
+      height: 20px;
+    }
+
+    50% {
+      height: 26px;
+    }
+
+    100% {
+      height: 20px;
     }
   }
 }

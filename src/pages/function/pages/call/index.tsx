@@ -3,61 +3,127 @@ import { View, Text, Image } from '@tarojs/components'
 import styles from './index.module.scss'
 import cx from 'classnames';
 import Taro from '@tarojs/taro'
-import song1 from './image/song1.jpeg'
-import song2 from './image/song2.jpeg'
-import song3 from './image/song3.jpeg'
-import song4 from './image/song4.jpeg'
-import song5 from './image/song5.jpeg'
-import song6 from './image/song6.jpeg'
-import song7 from './image/song7.jpeg'
-import song8 from './image/song8.jpeg'
-import song9 from './image/song9.jpeg'
 
 const calls = [
   {
     song: '《没有办法》',
     text: '没有办法💗',
-    image: song1
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp42fbdj30pd0pdwg1.jpg'
   },
   {
     song: '《臻》',
     text: '煜公主的美丽属于骑士✨回忆关于煜公主的👸🏼连同泪滴💧都是粉色💗',
-    image: song2
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp4g79uj30u00u0taa.jpg'
+  },
+  {
+    song: '《没有办法pt2.圣诞限度》',
+    text: '',
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp51xppj30u00u0wm7.jpg'
   },
   {
     song: '《WHAT U WANT》',
     text: '煜公主👸🏼和骑士紧紧挨在一起💕 只是呆在原地💫便有面对世界的勇气💖',
-    image: song3
-  },
-  {
-    song: '《像朋友一样吗》',
-    text: '听过最动听💖的声音🎶是煜公主👸🏼在歌里说爱骑士💘骑士对煜公主的爱💓用语言总无法概括',
-    image: song4
-  },
-  {
-    song: '《时光河里划着小船摇啊摇》',
-    text: '和煜公主👸🏼划小船🛶摇啊摇🌟摇船桨💖摇烦恼✨咧嘴的笑🫧',
-    image: song5
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
   },
   {
     song: '《嘿，你好》',
     text: '嘿你好📞如果时间有尽头⏳骑士会在那里等煜公主👸🏼不会再错过💓',
-    image: song6
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp7samej30kf0kfjth.jpg'
+  },
+  {
+    song: '《摩天轮》',
+    text: '',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kp9aeo5j32sb2sb4qq.jpg'
+  },
+  {
+    song: '《Weekend》',
+    text: '',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpa5vm8j30n00n0wgq.jpg'
+  },
+  {
+    song: '《唯一》',
+    text: '',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpc0cpcj30u00u0afx.jpg'
+  },
+  {
+    song: '《像朋友一样吗》',
+    text: '听过最动听💖的声音🎶是煜公主👸🏼在歌里说爱骑士💘骑士对煜公主的爱💓用语言总无法概括',
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kpak9j1j30u00u076l.jpg'
+  },
+  {
+    song: '《时光河里划着小船摇啊摇》',
+    text: '和煜公主👸🏼划小船🛶摇啊摇🌟摇船桨💖摇烦恼✨咧嘴的笑🫧',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpbdd05j30u00u0wlq.jpg'
+  },
+  {
+    song: '《普通不普通》',
+    text: '',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpcgkooj30ro0ro7br.jpg'
+  },
+  {
+    song: '《成为你自己好吗》',
+    text: '',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpcumgmj30u00u0djm.jpg'
   },
   {
     song: '《BLUE+PINK》',
     text: '等到煜公主👸🏼想要牵着骑士的手🩵骑士💂带煜公主去环游💞仰望宇宙💫💫',
-    image: song7
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kp3q7mhj30u00u0n0e.jpg'
+  },
+  {
+    song: '《between I & U》',
+    text: '',
+    image: ''
   },
   {
     song: '《WHAT IS LOVE》',
     text: 'Love is a mysterious💖骑士✨只想在煜公主👸🏼心里降落🛬',
-    image: song8
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpbn9a1j30n00n0dhu.jpg'
+  },
+  {
+    song: '《CANDY CRUSH》',
+    text: '',
+    image: ''
+  },
+  {
+    song: '《1+1》',
+    text: '',
+    image: ''
+  },
+  {
+    song: '《钟》',
+    text: '',
+    image: ''
+  },
+  {
+    song: '《存在》',
+    text: '',
+    image: ''
+  },
+  {
+    song: '《B.O.W》',
+    text: '',
+    image: ''
+  },
+  {
+    song: '《煜Freestyle》',
+    text: '',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpdapddj30u00u0tec.jpg'
   },
   {
     song: '《MY ZONE》',
     text: '为煜公主👸🏼打破墨菲定律🫧煜公主牵动骑士💂的每一次心跳💓',
-    image: song9
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpdmq4ij30u00u0dip.jpg'
+  },
+  {
+    song: '《朗吟》',
+    text: '',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpdxs8qj30u00u0acu.jpg'
+  },
+  {
+    song: '《清零》',
+    text: '',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpdxs8qj30u00u0acu.jpg'
   }
 ]
 
@@ -225,7 +291,7 @@ const Call = (props: { activeTabIndex: number }) => {
       {
         calls.map((item) =>
           <View className={cx(styles.songCard, 'at-col')} onClick={() => copy(item.text)} >
-            <Image className={cx(styles.songCard, 'at-col', styles.songBackground)} src={item.image || song1}></Image>
+            <Image className={cx(styles.songCard, 'at-col', styles.songBackground)} src={item.image}></Image>
             <View className={cx(styles.songCardText)}>
               <Text className={cx(styles.title, styles.text)}>{item.song}</Text>
               <Text className={styles.text}>{item.text}</Text>
