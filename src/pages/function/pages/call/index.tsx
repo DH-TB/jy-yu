@@ -178,35 +178,6 @@ const callsOther = [
   }
 ]
 
-const backgrounds = [
-  'linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)',
-  'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)',
-  'linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)',
-  'linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)',
-  'linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%)',
-  'linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)',
-  'linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)',
-  'linear-gradient(to top, #a8edea 0%, #fed6e3 100%)',
-  'linear-gradient(to top, #d299c2 0%, #fef9d7 100%)',
-  'linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%)',
-  'linear-gradient(to top, #fddb92 0%, #d1fdff 100%)',
-  'linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%)',
-  'linear-gradient(to top, #feada6 0%, #f5efef 100%)',
-  'linear-gradient(to top, #9795f0 0%, #fbc8d4 100%)',
-  'linear-gradient(60deg, #abecd6 0%, #fbed96 100%)',
-  'linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)',
-  'linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% )',
-  'linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)',
-  'linear - gradient(-225deg, #3D4E81 0 %, #5753C9 48 %, #6E7FF3 100 %)',
-  'linear - gradient(-225deg, #DFFFCD 0 %, #90F9C4 48 %, #39F3BB 100 %)',
-  'linear - gradient(to right, #c1c161 0 %, #c1c161 0 %, #d4d4b1 100 %)',
-  'linear - gradient(60deg, #3d3393 0 %, #2b76b9 37 %, #2cacd1 65 %, #35eb93 100 %)',
-  'linear - gradient(to top, #9be15d 0 %, #00e3ae 100 %)',
-  'linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%)',
-  'linear-gradient( 180.3deg,  rgba(221,221,221,1) 5.5%, rgba(110,136,161,1) 90.2% )',
-  'linear-gradient( 89.4deg,  rgba(74,77,103,1) -4.3%, rgba(119,125,165,1) 102.1% )'
-]
-
 const degs = [
   '45deg', '60deg', '120deg', '180deg', '220deg', '260deg', '320deg'
 ]

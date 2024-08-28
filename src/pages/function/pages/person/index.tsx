@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import Taro from '@tarojs/taro'
 import {View, Image, Text} from '@tarojs/components'
 import styles from './index.module.scss'
@@ -11,6 +11,7 @@ import qr from './image/qr.jpeg'
 import qr1 from './image/qr1.svg'
 import text from './image/text.png'
 import song from './image/song.png'
+import title from '../../../../image/title.png'
 import cx from 'classnames'
 
 const links = [
@@ -47,6 +48,9 @@ const links = [
 
 function Person() {
   const [showFront, setShowFront] = useState(true)
+  const statusBarHeight = useMemo(() => Taro.getSystemInfoSync().statusBarHeight, [])
+
+  console.log(Taro.getSystemInfoSync(), statusBarHeight, 44)
 
   useEffect(() => {
     const audio = Taro.createInnerAudioContext();
@@ -94,6 +98,9 @@ function Person() {
 
   return (
     <View className={styles.home}>
+      <View className={styles.titleWrap}>
+        <Image src={title} className={styles.title} />
+      </View>
       <View className={styles.songWrap}>
         <View className={styles.songInfo}>
           <Image src={song} className={styles.songIcon}/>

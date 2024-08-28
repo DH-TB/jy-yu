@@ -60,6 +60,7 @@ const dailyImages = [
   'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kd1c55pj30rr0s3aez.jpg',
   'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kcx8dd1j30r90retgs.jpg'
 ]
+
 const dailyTexts = [
   '万事尽头 终将如意',
   '要勇敢 不要盘旋',
@@ -69,6 +70,7 @@ const dailyTexts = [
   '永远有人十七岁 但是没有人永远十七岁',
   '山鸟与鱼不同路'
 ]
+// '第一次活 手忙脚乱 一点小事就想死 是正常人类的 可爱反应机制'
 
 function WordDay() {
   const [data, setData] = useState<{
