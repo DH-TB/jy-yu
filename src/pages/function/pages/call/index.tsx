@@ -6,6 +6,11 @@ import Taro from '@tarojs/taro'
 
 const calls = [
   {
+    song: '《生于未来》',
+    text: `钻石💎被切割那面渗透出高级感 💫拉上窗帘也遮盖不住煜皇❤️‍🔥像钻石超级闪✨`,
+    image: 'https://wx2.sinaimg.cn/large/008Dx289gy1hs56tuidjcj30ie0n9abq.jpg'
+  },
+  {
     song: '《没有办法》',
     text: '💕没有办法✨拿你没有办法💫骑士守护煜公主👸🏼像写童话🫧',
     image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp42fbdj30pd0pdwg1.jpg'
@@ -63,7 +68,7 @@ const calls = [
   {
     song: '《成为你自己好吗》',
     text: '✨过去没有人曾像煜公主👸🏼未来也没有人会像煜公主💫你就是唯一💖的煜公主🌟',
-    image: ''
+    image: 'https://wx3.sinaimg.cn/large/008Dx289gy1hs56tjmlrej30ie0satat.jpg'
   },
   {
     song: '《BLUE+PINK》',

@@ -1,11 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Image, Text } from '@tarojs/components'
+import { View, Image, Text, WebView } from '@tarojs/components'
 import styles from './index.module.scss'
-import q1 from './image/q1.jpeg'
-import q2 from './image/q2.jpeg'
-import q3 from './image/q3.jpeg'
-import q4 from './image/q4.jpeg'
 import image from './image/q.jpg'
 import text from './image/text.png'
 import cx from 'classnames'
@@ -13,24 +9,24 @@ import Bar from "../bar";
 
 const links = [
   {
-    image: q1,
+    image: 'https://wx1.sinaimg.cn/large/0089ZZ9mgy1hqzlz9r1eqg308c08c1kx.gif',
     value: '【超话】',
-    path: '5020731203125889'
+    path: '5072452772433134'
   },
   {
-    image: q2,
+    image: 'https://wx2.sinaimg.cn/large/0089ZZ9mgy1hqzj9q0v22g308c08ckh8.gif',
     value: '【专贴】',
     path: '5046827349705134'
   },
   {
-    image: q3,
+    image: 'https://wx4.sinaimg.cn/large/0089ZZ9mgy1hqzj9ofvz8g308c08ck97.gif',
     value: '【B站】',
     path: '113006595932963'
   },
   {
-    image: q4,
-    value: '7EVNVEN',
-    path: '1753403670'
+    image: 'https://wx2.sinaimg.cn/large/0089ZZ9mgy1hqzlz62309g308c08cne8.gif',
+    value: '卧底游戏',
+    path: '113017014453240'
   },
   // value: '【TOP歌曲】'
   // value: '【打工记录】'
@@ -67,26 +63,41 @@ function Person() {
     };
   }, []);
 
+  const openBilibiliInBrowser = () => {
+    Taro.setClipboardData({
+      data: 'https://www.bilibili.com',
+      success: function () {
+        Taro.showModal({
+          title: '提示',
+          content: '链接已复制，去浏览器中打开？',
+          success: function (res) {
+            if (res.confirm) {
+              Taro.getSystemInfo({
+                success: function (info) {
+                  if (info.platform === 'ios') {
+                    Taro.showToast({
+                      title: '请手动粘贴链接至Safari浏览器中打开',
+                      icon: 'none',
+                      duration: 2000,
+                    });
+                  } else {
+                    Taro.showToast({
+                      title: '请手动粘贴链接至浏览器中打开',
+                      icon: 'none',
+                      duration: 2000,
+                    });
+                  }
+                },
+              });
+            }
+          },
+        });
+      },
+    });
+  };
+
   const jump = (item, index) => {
-    if (index === 3) {
-      Taro.navigateToMiniProgram({
-        appId: 'wx8dd6ecd81926cfe7', // 网易云音乐的微信小程序AppID
-        path: '', // 如果有指定的路径，可以填写具体路径，如果跳转到首页可以留空
-        extraData: {
-          // 你可以通过这个参数携带数据到目标小程序
-        },
-        envVersion: 'release', // 打开正式版
-        success(res) {
-          // 打开成功
-          console.log('跳转成功');
-        },
-        fail(err) {
-          // 打开失败
-          console.log('跳转失败', err);
-        }
-      });
-    }
-    else if (index >= 2) {
+    if (index >= 2) {
       const timestamp = new Date().getTime()
       const path = `pages/video/video?__preload_=${timestamp * 10 + 3}&__key_=${timestamp * 10 + 4}&avid=${item.path}`
       Taro.navigateToMiniProgram({
