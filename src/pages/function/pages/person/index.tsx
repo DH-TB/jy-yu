@@ -7,12 +7,9 @@ import q2 from './image/q2.jpeg'
 import q3 from './image/q3.jpeg'
 import q4 from './image/q4.jpeg'
 import image from './image/q.jpg'
-import qr from './image/qr.jpeg'
-import qr1 from './image/qr1.svg'
 import text from './image/text.png'
-import song from './image/song.png'
-import title from '../../../../image/title.png'
 import cx from 'classnames'
+import Bar from "../bar";
 
 const links = [
   {
@@ -98,12 +95,10 @@ function Person() {
 
   return (
     <View className={styles.home}>
-      <View className={styles.titleWrap}>
-        <Image src={title} className={styles.title} />
-      </View>
+     <Bar />
       <View className={styles.songWrap}>
         <View className={styles.songInfo}>
-          <Image src={song} className={styles.songIcon}/>
+          <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon}/>
           <View className={styles.song}>
             <View className={styles.songText}>没有办法 拿你没有办法</View>
             <View className={styles.songName}>7EVNVEN/没有办法<Text className={styles.original}>原创</Text></View>
@@ -153,9 +148,9 @@ function Person() {
           )}
         </View>
         <View className={styles.qrIconWrap}>
-          <Image src={qr1} className={styles.qrIcon}/>
+          <Image src={'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg'} className={styles.qrIcon}/>
           <Image src={text} className={styles.text}/>
-          <Image src={qr} className={styles.qrIcon}/>
+          <Image src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'} className={styles.qrIcon}/>
         </View>
       </View>
     </View>

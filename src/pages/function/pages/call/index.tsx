@@ -38,12 +38,12 @@ const calls = [
   {
     song: '《Weekend》',
     text: '',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpa5vm8j30n00n0wgq.jpg'
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
   },
   {
-    song: '《唯一》',
+    song: '《KnowKnow-唯一》',
     text: '',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpc0cpcj30u00u0afx.jpg'
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpa5vm8j30n00n0wgq.jpg'
   },
   {
     song: '《像朋友一样吗》',
@@ -58,12 +58,12 @@ const calls = [
   {
     song: '《普通不普通》',
     text: '',
-    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpcgkooj30ro0ro7br.jpg'
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
   },
   {
     song: '《成为你自己好吗》',
     text: '',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpcumgmj30u00u0djm.jpg'
+    image: ''
   },
   {
     song: '《BLUE+PINK》',
@@ -73,7 +73,7 @@ const calls = [
   {
     song: '《between I & U》',
     text: '',
-    image: ''
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
   },
   {
     song: '《WHAT IS LOVE》',
@@ -83,27 +83,27 @@ const calls = [
   {
     song: '《CANDY CRUSH》',
     text: '',
-    image: ''
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpc0cpcj30u00u0afx.jpg'
   },
   {
-    song: '《1+1》',
+    song: '《1+1≠1》',
     text: '',
-    image: ''
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpcgkooj30ro0ro7br.jpg'
   },
   {
     song: '《钟》',
     text: '',
-    image: ''
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpcumgmj30u00u0djm.jpg'
   },
   {
     song: '《存在》',
     text: '',
-    image: ''
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
   },
   {
     song: '《B.O.W》',
     text: '',
-    image: ''
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
   },
   {
     song: '《煜Freestyle》',
@@ -123,7 +123,7 @@ const calls = [
   {
     song: '《清零》',
     text: '',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpdxs8qj30u00u0acu.jpg'
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpeel7zj30hs0hsadm.jpg'
   }
 ]
 
