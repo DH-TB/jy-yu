@@ -6,7 +6,7 @@ import Call from "../../function/pages/call";
 import Bar from "../../function/pages/bar";
 
 const tabs = [
-  '原创', '翻唱'
+  '原创', '翻唱', '普通'
 ]
 
 function Board() {

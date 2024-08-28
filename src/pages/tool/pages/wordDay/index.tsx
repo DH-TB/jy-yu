@@ -62,15 +62,18 @@ const dailyImages = [
 ]
 
 const dailyTexts = [
+  '人生之所以珍贵',
+  '不是我们去过的一个又一个精彩华丽的旅游胜地🏜️',
+  '而是旅途之中寂寞无聊不可打发的时间里 有你陪伴💓',
   '万事尽头 终将如意',
   '要勇敢 不要盘旋',
   '你要为喜欢的东西奔跑 走路真的来不及',
-  '人间不值得 开心最重要',
-  '世界需要讲道理 而我永远向着你',
-  '永远有人十七岁 但是没有人永远十七岁',
-  '山鸟与鱼不同路'
+  '人间不值得 开心最重要'
 ]
+// '世界需要讲道理 而我永远向着你'
+// '永远有人十七岁 但是没有人永远十七岁'
 // '第一次活 手忙脚乱 一点小事就想死 是正常人类的 可爱反应机制'
+// '山鸟与鱼不同路'
 
 function WordDay() {
   const [data, setData] = useState<{
@@ -114,7 +117,7 @@ function WordDay() {
             {item.hitokoto &&
               <View className={styles.tip}>
                 {item.from ? <Text>—— {item.from}</Text> : <Text></Text>}
-                {item.from_who ? <Text> . {item.from_who}</Text> : <Text/>}
+                {item.from_who ? <Text> · {item.from_who}</Text> : <Text/>}
               </View>
             }
           </View>

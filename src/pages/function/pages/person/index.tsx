@@ -1,6 +1,6 @@
-import {useEffect, useMemo, useState} from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Taro from '@tarojs/taro'
-import {View, Image, Text} from '@tarojs/components'
+import { View, Image, Text } from '@tarojs/components'
 import styles from './index.module.scss'
 import q1 from './image/q1.jpeg'
 import q2 from './image/q2.jpeg'
@@ -29,7 +29,7 @@ const links = [
   },
   {
     image: q4,
-    value: '煜情骨纵',
+    value: '7EVNVEN',
     path: '1753403670'
   },
   // value: '【TOP歌曲】'
@@ -68,7 +68,25 @@ function Person() {
   }, []);
 
   const jump = (item, index) => {
-    if (index >= 2) {
+    if (index === 3) {
+      Taro.navigateToMiniProgram({
+        appId: 'wx8dd6ecd81926cfe7', // 网易云音乐的微信小程序AppID
+        path: '', // 如果有指定的路径，可以填写具体路径，如果跳转到首页可以留空
+        extraData: {
+          // 你可以通过这个参数携带数据到目标小程序
+        },
+        envVersion: 'release', // 打开正式版
+        success(res) {
+          // 打开成功
+          console.log('跳转成功');
+        },
+        fail(err) {
+          // 打开失败
+          console.log('跳转失败', err);
+        }
+      });
+    }
+    else if (index >= 2) {
       const timestamp = new Date().getTime()
       const path = `pages/video/video?__preload_=${timestamp * 10 + 3}&__key_=${timestamp * 10 + 4}&avid=${item.path}`
       Taro.navigateToMiniProgram({
@@ -81,6 +99,7 @@ function Person() {
     } else {
       jumpTo(item)
     }
+
   }
 
   const jumpTo = (item) => {
@@ -95,10 +114,10 @@ function Person() {
 
   return (
     <View className={styles.home}>
-     <Bar />
+      <Bar />
       <View className={styles.songWrap}>
         <View className={styles.songInfo}>
-          <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon}/>
+          <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon} />
           <View className={styles.song}>
             <View className={styles.songText}>没有办法 拿你没有办法</View>
             <View className={styles.songName}>7EVNVEN/没有办法<Text className={styles.original}>原创</Text></View>
@@ -135,22 +154,22 @@ function Person() {
         />
       </View>
       <View className={styles.info}>
-        <Image src={image} className={styles.icon}/>
+        <Image src={image} className={styles.icon} />
         <View className={styles.typing}>欢迎来到比比芭比啵比星球...</View>
       </View>
       <View className={styles.cardContainer}>
         <View className={styles.cardWrap}>
           {links.map((item, index) =>
             <View className={cx(styles.card)} onClick={() => jump(item, index)}>
-              <Image src={item.image} className={styles.cardImage}/>
+              <Image src={item.image} className={styles.cardImage} />
               <View>{item.value}</View>
             </View>
           )}
         </View>
         <View className={styles.qrIconWrap}>
-          <Image src={'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg'} className={styles.qrIcon}/>
-          <Image src={text} className={styles.text}/>
-          <Image src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'} className={styles.qrIcon}/>
+          <Image src={'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg'} className={styles.qrIcon} />
+          <Image src={text} className={styles.text} />
+          <Image src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'} className={styles.qrIcon} />
         </View>
       </View>
     </View>
