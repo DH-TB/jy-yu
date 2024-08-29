@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import styles from './index.module.scss'
-import cx from 'classnames';
 import Call from "../../function/pages/call";
-import Bar from "../../function/pages/bar";
+import Bar from "../../component/pages/bar";
+import Tab from '../../component/pages/tab';
 
 const tabs = [
   '原创', '翻唱', '普通'
@@ -15,9 +15,7 @@ function Board() {
   return (
     <View className={styles.board}>
       <Bar />
-      <View className={styles.tab}>
-        {tabs.map((item, index) => <Text className={cx(styles.tabTitle, index === activeTabIndex && styles.activeTitle)} onClick={() => setActiveTabIndex(index)}>{item}</Text>)}
-      </View>
+      <Tab tabs={tabs} changeTab={setActiveTabIndex} />
       <Call activeTabIndex={activeTabIndex}></Call>
     </View>
   )

@@ -1,5 +1,5 @@
 .cardWrap {
-  max-height: calc(100vh - 230px);
+  max-height: calc(100vh - 280px);
   overflow: scroll;
   position: relative;
 
@@ -15,7 +15,6 @@
 
   .songBackground {
     position: absolute;
-    z-index: -1;
   }
 
   .songCardText {
@@ -24,6 +23,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     height: 550px;
+    z-index: 2;
   }
 
   .title {
@@ -41,6 +41,7 @@
     width: calc(100vw - 48px);
     height: fit-content;
     border-radius: 24px;
+    margin-left: 16px;
   }
 
   .otherSongTitle {

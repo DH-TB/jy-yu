@@ -1,21 +1,5 @@
 .board {
   background: #fff7f3;
-  z-index: -1;
-
-  .tab {
-    padding: 16px;
-    height: 48px;
-
-    .tabTitle {
-      color: #666;
-      margin-right: 48px;
-      font-size: 30px;
-    }
-
-    .activeTitle {
-      font-weight: 600;
-      color: #1b1c1e;
-      font-size: 36px;
-    }
-  }
+  height: 100vh;
+  overflow: hidden;
 }

@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 import image from './image/q.jpg'
 import text from './image/text.png'
 import cx from 'classnames'
-import Bar from "../bar";
+import Bar from "../../../component/pages/bar";
 
 const links = [
   {
@@ -123,6 +123,14 @@ function Person() {
     })
   }
 
+  const showToast = () => {
+    Taro.showToast({
+      title: '假的啦!～～，播放不了呢',
+      icon: 'none',
+      duration: 2000
+    })
+  }
+
   return (
     <View className={styles.home}>
       <Bar />
@@ -150,7 +158,7 @@ function Person() {
         </View>
         <View className={styles.playIconWrap}>
           <View className='at-icon at-icon-prev'></View>
-          <View className={cx(styles.playIcon, 'at-icon at-icon-play')}></View>
+          <View className={cx(styles.playIcon, 'at-icon at-icon-play')} onClick={showToast}></View>
           <View className='at-icon at-icon-next'></View>
         </View>
       </View>

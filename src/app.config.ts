@@ -10,12 +10,7 @@ export default defineAppConfig({
       "root": "pages/function/",
       "pages": [
         "pages/call/index",
-        "pages/person/index"
-      ]
-    },
-    {
-      "root": "pages/tool/",
-      "pages": [
+        "pages/person/index",
         "pages/wordDay/index"
       ]
     }
@@ -35,19 +30,19 @@ export default defineAppConfig({
     list: [
       {
         pagePath: 'pages/tabBar/home/index',
-        text: '首页',
+        text: '煜煜',
         iconPath: "image/q1.jpg",
         selectedIconPath: "image/q2.jpg",
       },
       {
         pagePath: 'pages/tabBar/recommendation/index',
-        text: '日推',
+        text: '一些',
         iconPath: "image/q3.jpeg",
         selectedIconPath: "image/q4.jpeg",
       },
       {
         pagePath: 'pages/tabBar/board/index',
-        text: '发疯文学',
+        text: '存档',
         iconPath: "image/q5.jpeg",
         selectedIconPath: "image/q6.jpeg",
       },

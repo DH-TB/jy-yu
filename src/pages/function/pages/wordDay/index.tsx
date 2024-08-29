@@ -75,7 +75,7 @@ const dailyTexts = [
 // '第一次活 手忙脚乱 一点小事就想死 是正常人类的 可爱反应机制'
 // '山鸟与鱼不同路'
 
-function WordDay() {
+function WordDay(props: { activeTabIndex: number }) {
   const [data, setData] = useState<{
     hitokoto: '',
     from: '',
@@ -86,13 +86,11 @@ function WordDay() {
 
   useEffect(() => {
     const arrays = Array.from({length: 7}, (_, i) => refresh())
-    console.log(arrays, 8)
     Promise.all(arrays)
       .then(responses => {
         return Promise.all(responses.map(response => response.data));
       })
       .then(data => {
-        console.log(data)
         setData(data)
       })
       .catch((err) => {
