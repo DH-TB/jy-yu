@@ -9,127 +9,152 @@ const calls = [
   {
     song: '《生于未来》',
     text: `钻石💎被切割那面渗透出高级感 💫拉上窗帘也遮盖不住煜皇❤️‍🔥像钻石超级闪✨`,
-    image: ''
-  },
-  {
-    song: '《没有办法》',
-    text: '💕没有办法✨拿你没有办法💫骑士守护煜公主👸🏼像写童话🫧',
-    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp42fbdj30pd0pdwg1.jpg'
-  },
-  {
-    song: '《臻》',
-    text: '煜公主的美丽属于骑士✨回忆关于煜公主的👸🏼连同泪滴💧都是粉色💗',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp4g79uj30u00u0taa.jpg'
+    image: '',
+    info: '',
   },
   {
     song: '《没有办法pt2·圣诞限定》',
     text: '',
-    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp51xppj30u00u0wm7.jpg'
-  },
-  {
-    song: '《像朋友一样吗》',
-    text: '听过最动听💖的声音🎶是煜公主👸🏼在歌里说爱骑士💘骑士对煜公主的爱💓用语言总无法概括',
-    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kpak9j1j30u00u076l.jpg'
-  },
-  {
-    song: '《WHAT U WANT》',
-    text: '煜公主👸🏼和骑士紧紧挨在一起💕 只是呆在原地💫便有面对世界的勇气💖',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
-  },
-  {
-    song: '《嘿，你好》',
-    text: '嘿你好📞如果时间有尽头⏳骑士会在那里等煜公主👸🏼不会再错过💓',
-    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp7samej30kf0kfjth.jpg'
-  },
-  {
-    song: '《摩天轮》',
-    text: '当煜公主👸🏼需要骑士的时候 就闪现✈️ 相信爱💞会有魔力🪄它会指引骑士来到煜公主身边🌟',
-    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kp9aeo5j32sb2sb4qq.jpg'
-  },
-  {
-    song: '《普通不普通》',
-    text: 'ohoh普通的人生🎞️普通的故事🌠因为煜公主👸🏼而变得不普通🌟',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
-  },
-  {
-    song: '《BLUE+PINK》',
-    text: '等到煜公主👸🏼想要牵着骑士的手🩵骑士💂带煜公主去环游💞仰望宇宙💫💫',
-    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kp3q7mhj30u00u0n0e.jpg'
-  },
-  {
-    song: '《between I & U》',
-    text: '对煜公主👸🏼骑士想说📢I Like💗I need💓I Love💕u',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
-  },
-  {
-    song: '《Weekend》',
-    text: '喝一杯🍷再喝一杯🥂陪在骑士🫧身边的只有煜公主👸🏼这一位✨',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
-  },
-  {
-    song: '《KnowKnow-唯一》',
-    text: '对于我们的第一次相遇🌟注定煜公主👸🏼是骑士心中70亿的唯一💫',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpa5vm8j30n00n0wgq.jpg'
-  },
-  {
-    song: '《时光河里划着小船摇啊摇》',
-    text: '和煜公主👸🏼划小船🛶摇啊摇🌟摇船桨💖摇烦恼✨咧嘴的笑🫧',
-    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpbdd05j30u00u0wlq.jpg'
-  },
-  {
-    song: '《成为你自己好吗》',
-    text: '✨过去没有人曾像煜公主👸🏼未来也没有人会像煜公主💫你就是唯一💖的煜公主🌟',
-    image: ''
-  },
-  {
-    song: '《1+1≠1》',
-    text: '曾经💖会畏惧流言蜚语💧但现在变了✨因为骑士会一直守护煜公主👸🏼',
-    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpcgkooj30ro0ro7br.jpg'
-  },
-  {
-    song: '《钟》',
-    text: '钟🕰️带不走的是牵挂💖的痕迹💧煜公主👸🏼带来的爱❤️藏在时针秒针里',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpcumgmj30u00u0djm.jpg'
-  },
-  {
-    song: '《清零》',
-    text: '煜公主👸🏼流了眼泪💧比鲜花还娇贵🌹一切都清零吧💫喝下这杯用回忆调配🥂',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpeel7zj30hs0hsadm.jpg'
-  },
-  {
-    song: '《WHAT IS LOVE》',
-    text: 'Love is a mysterious💖骑士✨只想在煜公主👸🏼心里降落🛬',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpbn9a1j30n00n0dhu.jpg'
-  },
-  {
-    song: '《CANDY CRUSH》',
-    text: '眼睛里的彩虹🌈在燃烧❤️‍🔥身边浩瀚银河🌌在环绕💫骑士会用心听煜公主👸🏼留下的暗号‼️',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpc0cpcj30u00u0afx.jpg'
-  },
-  {
-    song: '《B.O.W》',
-    text: '',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp51xppj30u00u0wm7.jpg',
+    info: '爱是自由意志的沉沦'
   },
   {
     song: '《煜Freestyle》',
     text: '',
-    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpdapddj30u00u0tec.jpg'
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpdapddj30u00u0tec.jpg',
+    info: '“可是我看他真不像假的 你看他哪像真的 眼神”'
   },
   {
-    song: '《MY ZONE》',
-    text: '为煜公主👸🏼打破墨菲定律🫧煜公主牵动骑士💂的每一次心跳💓',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpdmq4ij30u00u0dip.jpg'
+    song: '《1+1≠1》',
+    text: '曾经💖会畏惧流言蜚语💧但现在变了✨因为骑士会一直守护煜公主👸🏼',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpcgkooj30ro0ro7br.jpg',
+    info: '没有人再逼迫善良一定要战胜邪恶。'
+  },
+  {
+    song: '《摩天轮》',
+    text: '当煜公主👸🏼需要骑士的时候 就闪现✈️ 相信爱💞会有魔力🪄它会指引骑士来到煜公主身边🌟',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kp9aeo5j32sb2sb4qq.jpg',
+    info: '我想，成熟的爱是爱具体但抽象的人而不是爱完美却抽象的概念'
+  },
+  {
+    song: '《成为你自己好吗》',
+    text: '✨过去没有人曾像煜公主👸🏼未来也没有人会像煜公主💫你就是唯一💖的煜公主🌟',
+    image: '',
+    info: '没有描述'
+  },
+  {
+    song: '《BLUE+PINK》',
+    text: '等到煜公主👸🏼想要牵着骑士的手🩵骑士💂带煜公主去环游💞仰望宇宙💫💫',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kp3q7mhj30u00u0n0e.jpg',
+    info: '建议单曲循环'
+  },
+  {
+    song: '《清零》',
+    text: '煜公主👸🏼流了眼泪💧比鲜花还娇贵🌹一切都清零吧💫喝下这杯用回忆调配🥂',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpeel7zj30hs0hsadm.jpg',
+    info: '听完这首歌，过去所有糟糕的都清零吧'
+  },
+  {
+    song: '《时光河里划着小船摇啊摇》',
+    text: '和煜公主👸🏼划小船🛶摇啊摇🌟摇船桨💖摇烦恼✨咧嘴的笑🫧',
+    image: 'https://wx1.sinaimg.cn/large/005SF7JFly1ht3kpbdd05j30u00u0wlq.jpg',
+    info: '摇四季轮回，我们都变老。'
+  },
+  {
+    song: '《钟》',
+    text: '钟🕰️带不走的是牵挂💖的痕迹💧煜公主👸🏼带来的爱❤️藏在时针秒针里',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpcumgmj30u00u0djm.jpg',
+    info: '时间就像一条河卷走你也卷走我'
+  },
+  {
+    song: '《臻！》',
+    text: '煜公主的美丽属于骑士✨回忆关于煜公主的👸🏼连同泪滴💧都是粉色💗',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp4g79uj30u00u0taa.jpg',
+    info: '真实没有那么重要，重要的是真实感，所以…..嘘！'
+  },
+  {
+    song: '《普通不普通》',
+    text: 'ohoh普通的人生🎞️普通的故事🌠因为煜公主👸🏼而变得不普通🌟',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg',
+    info: '尝试用音乐让自己成为一个表达者——混沌中寻找着什么'
+  },
+  {
+    song: '《between I & U》',
+    text: '对煜公主👸🏼骑士想说📢I Like💗I need💓I Love💕u',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg',
+    info: '尝试用音乐让自己成为一个表达者——混沌中寻找着什么'
+  },
+  {
+    song: '《Weekend》',
+    text: '喝一杯🍷再喝一杯🥂陪在骑士🫧身边的只有煜公主👸🏼这一位✨',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg',
+    info: '尝试用音乐让自己成为一个表达者——混沌中寻找着什么'
+  },
+  {
+    song: '《B.O.W》',
+    text: '',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg',
+    info: '尝试用音乐让自己成为一个表达者——混沌中寻找着什么'
+  },
+  {
+    song: '《WHAT U WANT》',
+    text: '煜公主👸🏼和骑士紧紧挨在一起💕 只是呆在原地💫便有面对世界的勇气💖',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg',
+    info: '尝试用音乐让自己成为一个表达者——混沌中寻找着什么'
   },
   {
     song: '《存在》',
     text: '存在✨谁能定义我们的存在⭐️煜公主的灵魂👸🏼会成为骑士们的最爱💖',
-    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg'
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kp7f9v5j3334334e82.jpg',
+    info: '尝试用音乐让自己成为一个表达者——混沌中寻找着什么'
   },
   {
-    song: '《狼吟》',
+    song: '《没有办法》',
+    text: '💕没有办法✨拿你没有办法💫骑士守护煜公主👸🏼像写童话🫧',
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp42fbdj30pd0pdwg1.jpg',
+    info: '落日和你、星辰和你，都合理'
+  },
+  {
+    song: '《嘿，你好》',
+    text: '嘿你好📞如果时间有尽头⏳骑士会在那里等煜公主👸🏼不会再错过💓',
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kp7samej30kf0kfjth.jpg',
+    info: '后来才发现，跟随你一起失去的是我自己。'
+  },
+  {
+    song: '《MY ZONE》',
+    text: '为煜公主👸🏼打破墨菲定律🫧煜公主牵动骑士💂的每一次心跳💓',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpdmq4ij30u00u0dip.jpg',
+    info: 'We1come 2 My Z0N1'
+  },
+  {
+    song: '《CANDY CRUSH》',
+    text: '眼睛里的彩虹🌈在燃烧❤️‍🔥身边浩瀚银河🌌在环绕💫骑士会用心听煜公主👸🏼留下的暗号‼️',
+    image: 'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kpc0cpcj30u00u0afx.jpg',
+    info: '小时候总想长大，长大后又总羡慕别人的小时候。'
+  },
+  {
+    song: '《像朋友一样吗》',
+    text: '听过最动听💖的声音🎶是煜公主👸🏼在歌里说爱骑士💘骑士对煜公主的爱💓用语言总无法概括',
+    image: 'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kpak9j1j30u00u076l.jpg',
+    info: '每个阶段都有终点站，我们得下车往前走，路过学校花店、荒野到海边、城堡和花园，在未来某个节点再会和。'
+  },
+  {
+    song: '《KnowKnow-唯一》',
+    text: '对于我们的第一次相遇🌟注定煜公主👸🏼是骑士心中70亿的唯一💫',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpa5vm8j30n00n0wgq.jpg',
+    info: '7even1leveN发了首Remix随便听听吧'
+  },
+  {
+    song: '《WHAT IS LOVE》',
+    text: 'Love is a mysterious💖骑士✨只想在煜公主👸🏼心里降落🛬',
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpbn9a1j30n00n0dhu.jpg',
+    info: '简介：可以告诉我答案了吗？'
+  },
+  {
+    song: '狼人杀陪我度过了很长一段时间，这首歌写给网易狼人杀，也给同样喜欢玩狼人杀的你们。',
     text: '骑士眼里只有煜公主 👸🏼永远站边煜公主🌟 女巫有毒🔮猎人有枪⁀➷而你有我💖',
-    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpdxs8qj30u00u0acu.jpg'
+    image: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kpdxs8qj30u00u0acu.jpg',
+    info: '狼人杀陪我度过了很长一段时间，这首歌写给网易狼人杀，也给同样喜欢玩狼人杀的你们。'
   },
   
 ]
