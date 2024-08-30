@@ -3,6 +3,7 @@ import {View, Text, Image, SwiperItem, Swiper} from '@tarojs/components'
 import styles from "./index.module.scss";
 import Taro from '@tarojs/taro';
 import cx from 'classnames'
+import { defaultBackground } from '../../../../constants/color';
 
 const dailys = [
   {
@@ -110,7 +111,7 @@ function WordDay(props: { activeTabIndex: number }) {
       {data.map((item, index) =>
         <SwiperItem key={index} className={styles.swiperitem}>
           <View key={index} className={cx(styles.dailyWrap)}>
-            <Image src={dailyImages[index]} className={styles.image}/>
+            <Image src={dailyImages[index]} className={styles.image} style={{ background: defaultBackground }}/>
             <View className={styles.text}>{item.hitokoto || dailyTexts[index]}</View>
             {item.hitokoto &&
               <View className={styles.tip}>

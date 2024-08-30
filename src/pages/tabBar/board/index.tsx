@@ -6,7 +6,7 @@ import Bar from "../../component/pages/bar";
 import Tab from '../../component/pages/tab';
 
 const tabs = [
-  '原创', '翻唱', '普通'
+  '原创', '翻唱', '通用'
 ]
 
 function Board() {

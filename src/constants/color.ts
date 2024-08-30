@@ -1,3 +1,6 @@
+export const defaultDarkBackground = 'radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% )'
+export const defaultBackground = 'radial-gradient(circle, rgba(211, 120, 133, 0.6) 30%, #e9d7d4 70%)'
+
 const color = [
     ['rgb(170 65 67)', 'rgb(248 218 201)'],
     ['#e98245', '#eaa875'],

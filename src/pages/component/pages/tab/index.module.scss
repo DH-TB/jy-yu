@@ -1,11 +1,14 @@
 .tab {
   padding: 32px;
   height: 48px;
-
+  display: flex;
+  
   .tabTitle {
     color: #666;
-    margin-right: 48px;
     font-size: 30px;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
   }
 
   .activeTitle {

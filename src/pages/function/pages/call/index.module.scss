@@ -6,7 +6,7 @@
   .songCard {
     border-radius: 36px;
     width: calc((100vw - 90px)/2);
-    height: 400px;
+    height: 360px;
     display: flex;
     justify-content: center;
     margin-bottom: 36px;
@@ -33,7 +33,6 @@
 
   .text {
     padding: 16px;
-    width: calc(42vw - 32px);
     white-space: break-spaces;
   }
 

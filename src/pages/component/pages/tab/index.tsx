@@ -19,7 +19,7 @@ function Tab(props: IProps) {
 
   return (
     <View className={styles.tab}>
-      {props.tabs.map((item, index) => <Text className={cx(styles.tabTitle, index === activeTabIndex && styles.activeTitle)} onClick={() => changeTab(index)}>{item}</Text>)}
+      {props.tabs.map((item, index) => <View className={cx(styles.tabTitle, index === activeTabIndex && styles.activeTitle)} onClick={() => changeTab(index)}>{item}</View>)}
     </View>
   )
 }
