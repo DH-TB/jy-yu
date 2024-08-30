@@ -1,0 +1,19 @@
+.holiday {
+  flex: 1;
+
+  .lyricWrap {
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+  }
+
+  .text {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    color: #666;
+    width: fit-content;
+    margin: 24rpx;
+  }
+}

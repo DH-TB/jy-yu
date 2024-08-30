@@ -3,6 +3,7 @@ import { View } from '@tarojs/components'
 import styles from "./index.module.scss";
 import WordDay from "../../function/pages/wordDay";
 import Random from "../../function/pages/random";
+import Lyric from "../../function/pages/lyric";
 import Bar from "../../component/pages/bar";
 import Tab from '../../component/pages/tab';
 import { useDispatch } from 'react-redux';
@@ -11,7 +12,7 @@ import Taro from '@tarojs/taro';
 import { WORD_DAY_TYPE } from '../../../constants/recommend';
 
 const tabs = [
-  '日推', '随机数'
+  '日推', '歌词', '随机数'
 ]
 const background = 'radial-gradient(circle, rgba(211, 120, 133, 0.6) 30%, #e9d7d4 70%)'
 
@@ -20,7 +21,7 @@ function Recommendation() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const arrays = Array.from({length: 7}, (_, i) => refresh())
+    const arrays = Array.from({ length: 7 }, (_, i) => refresh())
     Promise.all(arrays)
       .then(responses => {
         return Promise.all(responses.map(response => response.data));
@@ -42,11 +43,21 @@ function Recommendation() {
     })
   }
 
+  const renderContent = () => {
+    if (activeTabIndex === 0) {
+      return <WordDay />
+    }
+    else if (activeTabIndex === 1) {
+      return <Lyric />
+    }
+    return <Random />
+  }
+
   return (
     <View className={styles.recommendation} style={{ background: activeTabIndex === 0 ? 'rgba($color: #fff7f3, $alpha: 0.3)' : background }}>
       <Bar />
       <Tab tabs={tabs} changeTab={setActiveTabIndex} />
-      {activeTabIndex === 0 ? <WordDay /> : <Random />}
+      {renderContent()}
     </View>
   )
 }

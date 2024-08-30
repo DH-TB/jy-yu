@@ -11,7 +11,9 @@ export default defineAppConfig({
       "pages": [
         "pages/call/index",
         "pages/person/index",
-        "pages/wordDay/index"
+        "pages/wordDay/index",
+        "pages/holiday/index",
+        "pages/lyric/index",
       ]
     }
   ],
