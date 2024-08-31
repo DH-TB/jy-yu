@@ -26,6 +26,7 @@ export const randomColor = () => {
 // const buttonColor = ['#d4a09b', '#d09a95', '#edcfcd', '#eabebd', '#ce9a97']
 //现在的背景色
 // const buttonColor = ['#db93a6', '#d37885', '#e9d7d4']
+// main color = '#d37885'
 
 const colors = [
     '#a2b6df',

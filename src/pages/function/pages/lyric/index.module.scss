@@ -1,22 +1,19 @@
-.lyricContainer {
+.lyricWrap {
   flex: 1;
-  background: url('../../../../image/2.png') no-repeat center top;
+  background: url('../../../../image/love.png') no-repeat center top;
   background-size: contain;
   opacity: 0.5;
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+}
 
-  .lyricWrap {
-    display: flex;
-    height: inherit;
-    flex-direction: column;
-  }
-
-  .text {
-    display: flex;
-    background-color: white;
-    padding: 20px;
-    border-radius: 16px;
-    color: #666;
-    width: fit-content;
-    margin: 24rpx;
-  }
+.text {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  color: #666;
+  width: fit-content;
+  margin: 24rpx;
 }

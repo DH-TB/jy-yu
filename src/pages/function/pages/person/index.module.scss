@@ -1,7 +1,7 @@
 
 .home {
   // background-image: linear-gradient(to top, rgba(#ebbba7, 0.5) 0%, rgba(#eb9fb9, 0.5) 100%);
-  background-image: linear-gradient(0deg, #e9d7d4 0%, rgba(#d37885, 0.6) 10%, #e9d7d4 100%);
+  background-image: linear-gradient(0deg, #e9d7d4 0%, rgba(#d37885, 0.6) 0%, #e9d7d4 100%);
   height: 100vh;
   padding: 24px;
 
@@ -181,7 +181,7 @@
     margin: 36px 2px;
     background-color: #ffffff;
     border-radius: 16px;
-    color: #eb9fb9;
+    color: #d37885;
     padding: 8px 24px;
     box-shadow: inset 4px 4px 8px #d6d6d6, inset -4px -4px 8px #ffffff;
 
@@ -241,7 +241,6 @@
     }
   }
 }
-
 
 .box {
   width: 40px;
