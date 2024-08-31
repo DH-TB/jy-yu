@@ -4,47 +4,49 @@ import styles from './index.module.scss'
 import cx from 'classnames';
 
 function Random() {
-  const [min, setMin] = useState<string | undefined>(undefined)
-  const [max, setMax] = useState<string | undefined>(undefined)
-  const [count, setCount] = useState<string | undefined>(undefined)
+  const [min, setMin] = useState<number>(1)
+  const [max, setMax] = useState<number>(10)
+  const [count, setCount] = useState<number>(1)
   const [error, setError] = useState(false)
   const [result, setResult] = useState<any[]>([])
 
   const generateUniqueRandomNumbers = () => {
     setError(false);
     setResult([]);
-    if (Number(max) - Number(min) + 1 < Number(count)) {
-      console.log(max, min, count, 44)
+
+    if (max - min + 1 < count) {
       setError(true);
       return;
     }
 
     const randomNumbers = new Set();
-    while (randomNumbers.size < Number(count)) {
-      const randomNum = Math.floor(Math.random() * (Number(max) - Number(min) + 1)) + Number(min);
+    while (randomNumbers.size < count) {
+      const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
       randomNumbers.add(randomNum);
     }
     setResult(Array.from(randomNumbers));
   }
 
   const reset = () => {
-    setMin(undefined)
-    setMax(undefined)
-    setCount(undefined)
+    setMin(1)
+    setMax(10)
+    setCount(1)
     setResult([])
+    setError(false);
   }
 
+  console.log(max, min, count, error, result, 33)
   return (
     <View className={styles.random}>
       <View className={styles.randomContent}>
         <View className={styles.randomInput}>
           <Text className={styles.randomText}>范围：</Text>
-          <Input type='number' placeholder='min' className={styles.input} value={min} onInput={(data) => setMin(data.detail.value)} />
-          <Input type='number' placeholder='max' className={cx(styles.input, styles.padding)} value={max} onInput={(data) => setMax(data.detail.value)} />
+          <Input type='number' placeholder='min' className={styles.input} value={min.toString()} onInput={(data) => setMin(Number(data.detail.value))} />
+          <Input type='number' placeholder='max' className={cx(styles.input, styles.padding)} value={max.toString()} onInput={(data) => setMax(Number(data.detail.value))} />
         </View>
         <View className={styles.randomInput}>
           <Text className={styles.randomText}>个数：</Text>
-          <Input type='number' placeholder='count' className={styles.input} value={count} onInput={(data) => setCount(data.detail.value)} />
+          <Input type='number' placeholder='count' className={styles.input} value={count.toString()} onInput={(data) => setCount(Number(data.detail.value))} />
         </View>
         <View className={styles.randomButton}>
           <Button type='primary' className={styles.default} onClick={reset}>重置</Button>

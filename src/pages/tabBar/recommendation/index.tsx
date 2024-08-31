@@ -12,7 +12,7 @@ import Taro from '@tarojs/taro';
 import { WORD_DAY_TYPE } from '../../../constants/recommend';
 
 const tabs = [
-  '日推', '歌词', '随机数'
+  '日推', '歌词', '随机'
 ]
 const background = 'radial-gradient(circle, rgba(211, 120, 133, 0.6) 30%, #e9d7d4 70%)'
 
