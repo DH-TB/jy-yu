@@ -10,10 +10,16 @@ const initialState = Array.from({ length: 7 }, (_, i) => ({
 
 export const wordDaySlice = createSlice({
     name: 'wordDay',
-    initialState: initialState,
+    initialState: { data: initialState, success: false },
     reducers: {
         saveWordDay: (state, action) => {
-            state = action.payload;
+            state.data = state.data.map((item, index) => ({
+                ...item,
+                hitokoto: action.payload[index].hitokoto,
+                from: action.payload[index].from,
+                from_who: action.payload[index].from_who,
+            }));
+            state.success = true;
         },
     },
 });
