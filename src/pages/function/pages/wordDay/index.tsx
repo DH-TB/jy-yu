@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { saveWordDay } from '../../../../slices/wordDaySlice';
 import Taro from '@tarojs/taro';
 import { WORD_DAY_TYPE } from '../../../../constants/recommend';
+import { generateUniqueRandomNumbers } from '../../../../utils/util';
 
 function WordDay() {
   const wordDay = useSelector((state) => state.wordDay);
@@ -16,7 +17,7 @@ function WordDay() {
 
   useEffect(() => {
     if (!success) {
-      const arrays = Array.from({ length: 7 }, (_, i) => refresh())
+      const arrays = generateUniqueRandomNumbers(0, WORD_DAY_TYPE.length -1, 7).map((item) => refresh(WORD_DAY_TYPE[item as number]))
       Promise.all(
         arrays.map(promise =>
           promise.then(response => {
@@ -36,11 +37,9 @@ function WordDay() {
     }
   }, [])
 
-  const getDailyType = () => WORD_DAY_TYPE[Math.floor(Math.random() * (WORD_DAY_TYPE.length))]
-
-  const refresh = () => {
+  const refresh = (item) => {
     return Taro.request({
-      url: `https://v1.hitokoto.cn/?c=${getDailyType().type}`,
+      url: `https://v1.hitokoto.cn/?c=${item.type}`,
       method: 'GET'
     })
   }
