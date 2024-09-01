@@ -16,7 +16,7 @@ const degs = [
 ]
 
 export const randomColor = () => {
-    const current = color[new Date().getDay() - 1]
+    const current = color[new Date().getDay()]
     const getColor = () => current[Math.floor(Math.random() * 2)]
     const deg = degs[Math.floor(Math.random() * (degs.length))]
     return `linear-gradient(${deg}, ${getColor()} 0%, ${getColor()} 10%, ${getColor()} 100%)`

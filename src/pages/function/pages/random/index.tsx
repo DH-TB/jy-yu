@@ -37,7 +37,6 @@ function Random() {
     setError(false);
   }
 
-  console.log(max, min, count, error, result, 33)
   return (
     <View className={styles.random}>
       <View className={styles.randomContent}>
