@@ -1,5 +1,6 @@
-// $color: rgb(188 87 82);
 $color: rgb(188 76 79);
+$width: 160px;
+$halfWidth: calc($width / 2);
 
 .lyricWrap {
   flex: 1;
@@ -31,21 +32,21 @@ $color: rgb(188 76 79);
     z-index: 1;
   
     .heart {
-      left: 48vw;
-      top: 48vh;
+      left: calc(50vw - $halfWidth);
+      top: calc(50vh - calc($halfWidth / 2));
       position: relative;
-      width: 70px;
-      height: 70px;
+      width: $width;
+      height: $width;
       background-color: $color;
       transform: rotate(45deg);
       position: relative;
-      box-shadow: 5px 5px 70px 0 $color;
+      box-shadow: 5px 5px $width 0 $color;
       animation: heart .8s linear infinite;
     
       .name {
         z-index: 1;
-        width: 60px;
-        height: 48px;
+        width: 130px;
+        height: 100px;
         position: absolute;
         animation: name .8s linear infinite;
       }
@@ -53,25 +54,25 @@ $color: rgb(188 76 79);
       &::before {
         position: absolute;
         content: " ";
-        width: 70px;
-        height: 70px;
-        top: -35px;
+        width: $width;
+        height: $width;
+        top: -$halfWidth;
         left: 0;
         border-radius: 50%;
         background-color: $color;
-        box-shadow: 0 0 70px 0 $color;
+        box-shadow: 0 0 $width 0 $color;
       }
     
       &::after {
         position: absolute;
         content: " ";
-        width: 70px;
-        height: 70px;
+        width: $width;
+        height: $width;
         top: 0;
-        left: -35px;
+        left: -$halfWidth;
         border-radius: 50%;
         background-color: $color;
-        box-shadow: 0 0 70px 0 $color;
+        box-shadow: 0 0 $width 0 $color;
       }
     
       @keyframes name {
@@ -103,8 +104,4 @@ $color: rgb(188 76 79);
       }
     }
   }
-}
-
-.prevent {
-  pointer-events: none; 
 }

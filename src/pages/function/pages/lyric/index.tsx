@@ -5,13 +5,11 @@ import styles from './index.module.scss'
 import { LYRIC } from '../../../../constants/call'
 import { generateUniqueRandomNumbers } from '../../../../utils/util'
 import name from '../../../../image/name.png'
-import audio1 from '../../../../assets/audio1.mp3'
-import audio2 from '../../../../assets/audio2.mp3'
-import audio3 from '../../../../assets/audio3.mp3'
-import audio4 from '../../../../assets/audio4.mp3'
-import audio5 from '../../../../assets/audio5.mp3'
 
-const RADIO = [audio1, audio2, audio3, audio4, audio5]
+const RADIO = ['2623267833', '2623263920', '2623265844', '2623273307', '2623272380']
+
+const generate = () => generateUniqueRandomNumbers(0, LYRIC.length - 1, 9)
+
 const getStyle = () => {
   const alignments = ['flex-start', 'center', 'flex-end'];
   const randomRotation = Math.floor(Math.random() * 21) - 10;
@@ -24,13 +22,13 @@ const getStyle = () => {
 function Lyric() {
   const [count, setCount] = useState(0)
   const [playing, setPlaying] = useState(false)
-  const [data, setData] = useState(generateUniqueRandomNumbers(0, LYRIC.length - 1, 9))
-  const showHeart = useMemo(() => count === 47, [count])
+  const [data, setData] = useState(generate())
+  const showHeart = useMemo(() => count === 72, [count])
   const audio = useRef<any>()
 
   const refresh = () => {
     setCount(count + 1)
-    setData(generateUniqueRandomNumbers(0, LYRIC.length, 9))
+    setData(generate())
   }
 
   useEffect(() => {
@@ -51,15 +49,23 @@ function Lyric() {
     };
   }, []);
 
+  useEffect(() => {
+    if (showHeart) {
+      Taro.showToast({
+        title: '哦莫！隐藏福利就这样被你找到啦～～',
+        icon: 'none'
+      })
+    }
+  }, [showHeart])
   const getRandom = () => RADIO[Math.floor(Math.random() * RADIO.length)]
 
   const onClick = () => {
-    if(playing) {
+    if (playing) {
       return
     }
     if (audio.current) {
       setPlaying(true)
-      audio.current.src = getRandom()
+      audio.current.src = `https://music.163.com/song/media/outer/url?id=${getRandom()}`
       audio.current.play()
     }
   }
