@@ -60,7 +60,6 @@ function Random() {
           </View>
         }
       </View>
-
     </View>
   )
 }

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { View, Image } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import styles from './index.module.scss'
 import Taro from '@tarojs/taro'
 import cx from 'classnames'
 import get from 'lodash/get'
-import name from '../../../../image/name.png'
 
 const API = ['https://timor.tech/api/holiday/tts', 'https://timor.tech/api/holiday/tts/next', 'https://timor.tech/api/holiday/tts/tomorrow']
 
@@ -56,10 +55,6 @@ function Holiday() {
 
   return (
     <View className={styles.holiday}>
-      <View className={styles.heart}>
-        <Image src={name} className={styles.name} />
-      </View>
-      <View className={styles.word}>{data}</View>
       {calendar.date && <View className={styles.word}>
         <View>今天是{calendar.today}，{calendar.day}。</View>
         农历{calendar.month}{calendar.date}，{calendar.year}年{calendar.lunar_month}月{calendar.lunar_day}日。

@@ -6,7 +6,7 @@ import prodConfig from './prod'
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'vite'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'vite'> = {
-    projectName: 'yu',
+    projectName: 'jy-yu',
     date: '2024-8-22',
     designWidth: 750,
     deviceRatio: {
@@ -30,6 +30,12 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
     compiler: 'vite',
     mini: {
       postcss: {
+        url: {
+          enable: true,
+          config: {
+            limit: 10240 // 设置为 10KB, 超过这个大小的图片不会转为 Base64
+          }
+        },
         pxtransform: {
           enable: true,
           config: {
@@ -60,19 +66,20 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
           config: {}
         },
         cssModules: {
-          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
           config: {
             namingPattern: 'module', // 转换模式，取值为 global/module
             generateScopedName: '[name]__[local]___[hash:base64:5]'
           }
         }
       },
+      esnextModules: ['css-doodle'],
     },
     rn: {
       appName: 'taroDemo',
       postcss: {
         cssModules: {
-          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
         }
       }
     }

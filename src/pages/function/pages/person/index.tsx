@@ -48,7 +48,9 @@ function Person() {
 
   useEffect(() => {
     const audio = Taro.createInnerAudioContext();
-    audio.src = ''; // 替换为你的音频地址
+    // audio.src = 'https://music.163.com/song/media/outer/url?id=441491828'; // 替换为你的音频地址
+    // audio.src = 'http://m10.music.126.net/20240902125614/5e639df0678ef41fce5401a6024ce5c6/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/44516627733/60d2/a435/4344/f61cad241d5c7d0198b4542bf0e3b577.mp3'; // 替换为你的音频地址
+    audio.src = '';
     audio.autoplay = true;
 
     audio.onPlay(() => {
