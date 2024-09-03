@@ -7,6 +7,7 @@ import Lyric from "../../function/pages/lyric";
 import Holiday from "../../function/pages/holiday";
 import Bar from "../../component/pages/bar";
 import Tab from '../../component/pages/tab';
+import { useShareAppMessage } from '@tarojs/taro';
 
 const tabs = [
   '日推', '歌词', '抽象', '随机'
@@ -18,6 +19,14 @@ const lightBackground = 'rgba($color: #fff7f3, $alpha: 0.3)'
 const arrays = [lightBackground, background, bottomBackground, ellipseBackground]
 
 function Recommendation() {
+  useShareAppMessage(() => {
+    return {
+      title: '煜Yu',
+      path: '/pages/tabBar/recommendation/index',
+      imageUrl: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'
+    };
+  });
+  
   const [activeTabIndex, setActiveTabIndex] = useState(0)
   const renderContent = () => {
     if (activeTabIndex === 0) {

@@ -1,3 +1,5 @@
 export default definePageConfig({
-  navigationBarTitleText: '发疯文学'
+  navigationBarTitleText: '存档',
+  enableShareAppMessage: true,
+  enableShareTimeline: true,
 })

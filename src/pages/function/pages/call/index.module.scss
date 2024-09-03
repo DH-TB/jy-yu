@@ -1,5 +1,5 @@
 .cardWrap {
-  max-height: calc(100vh - 280px);
+  flex: 1;
   overflow: scroll;
   position: relative;
 
@@ -79,6 +79,36 @@
       padding-inline-end: 24px;
       padding-inline-start: 52px;
       box-shadow: 0 1px 6px 0 #20212447;
+    }
+  }
+}
+
+.artTextWrap {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  background: radial-gradient(circle, rgb(255, 124, 0) 20%, #e6a064 48%, #fff7f3 80%);
+  // background: radial-gradient(circle, rgb(255, 124, 0) 5%, #e6a064 50%, #fff7f3 80%);
+
+  .artTextImage {
+    margin-top: 200px;
+    height: 700px;
+    width: 550px;
+    border-radius: 24px;
+    box-shadow: 0 0 20px 0 black;
+    transform-origin: center;
+    animation: flyIn 2s ease-out forwards;
+  }
+  
+  @keyframes flyIn {
+    0% {
+      transform: translateX(-100vw) scale(0) rotate(0deg); /* 从屏幕左侧外面开始 */
+    }
+    50% {
+      transform: translateX(50vw) scale(1.2) rotate(720deg); /* 旋转2圈并放大 */
+    }
+    100% {
+      transform: translateX(0) scale(1) rotate(1080deg); /* 旋转3圈到最终位置 */
     }
   }
 }

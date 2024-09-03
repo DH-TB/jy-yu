@@ -44,7 +44,7 @@ export default defineAppConfig({
       },
       {
         pagePath: 'pages/tabBar/board/index',
-        text: '存档',
+        text: '应援',
         iconPath: "image/q5.jpeg",
         selectedIconPath: "image/q6.jpeg",
       },

@@ -1,21 +1,66 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { View, Text, Image, Input } from '@tarojs/components'
 import styles from './index.module.scss'
 import cx from 'classnames';
 import Taro from '@tarojs/taro'
 import { defaultDarkBackground, randomColor } from '../../../../constants/color';
-import { CALLS, CALLS_COMMON, CALLS_OTHER } from '../../../../constants/call';
+import { CALLS, CALLS_COMMON, CALLS_OTHER, WORDS } from '../../../../constants/call';
+import { generateUniqueRandomNumbers } from '../../../../utils/util';
+
+// const API1 = 'https://api.vvhan.com/api/moyu'
+const generate = () => `https://api.vvhan.com/api/artText?text=${WORDS[generateUniqueRandomNumbers(0, WORDS.length - 1, 1) as unknown as number].replace(/\n/g, '%0A')}&auther=一《煜》 &color=ff7c00&bgcolor=000000`;
 
 const Call = (props: { activeTabIndex: number }) => {
+  const [showImage, setShowImage] = useState(false)
   const [searchText, setSearchText] = useState('')
   const callOthers = useMemo(() => searchText === '' ? CALLS_OTHER :
     CALLS_OTHER.filter((item) => item.song.toLocaleUpperCase().includes(searchText.toLocaleUpperCase())
     ), [searchText]);
 
+  useEffect(() => {
+    onReset()
+  }, [props.activeTabIndex])
+
   const copy = (data) => {
     Taro.setClipboardData({
       data
     })
+  }
+
+  const onBlur = (data) => {
+    if (data.detail.value === '711' || data.detail.value === '7EVN1lVEN') {
+      setShowImage(true)
+    }
+  }
+
+  const onReset = () => {
+    setShowImage(false)
+    setSearchText('')
+  }
+
+  const renderContent = () => {
+    if (showImage) {
+      return <View className={cx(styles.artTextWrap)}>
+        <Image src={generate()} className={cx(styles.artTextImage)} onClick={onReset}>
+        </Image>
+      </View>
+    }
+    return <View className={cx(styles.cardWrap)}>
+      <View className={styles.inputWrap}>
+        <View className={cx(styles.inputIcon, 'at-icon at-icon-search')} />
+        <Input placeholder='请输入' className={styles.input} value={searchText} onInput={(data) => setSearchText(data.detail.value)} onBlur={onBlur} />
+      </View>
+      {
+        callOthers.map((item) => (
+          <View className={cx(styles.songCard, styles.otherSongCard)} onClick={() => copy(item.text)} >
+            <View className={cx(styles.songCardText, styles.otherSongCard)} style={{ background: item.background }}>
+              <Text className={cx(styles.otherSongTitle)}>{item.song}</Text>
+              <Text className={cx(styles.otherSongText)}>{item.text}</Text>
+            </View>
+          </View>
+        ))
+      }
+    </View>
   }
 
   if (props.activeTabIndex === 0) {
@@ -34,23 +79,7 @@ const Call = (props: { activeTabIndex: number }) => {
       }
     </View>
   } else if (props.activeTabIndex === 1) {
-    return <View className={cx(styles.cardWrap)}>
-      <View className={styles.inputWrap}>
-        <View className={cx(styles.inputIcon, 'at-icon at-icon-search')} />
-        <Input placeholder='请输入' className={styles.input} value={searchText} onInput={(data) => setSearchText(data.detail.value)} />
-      </View>
-
-      {
-        callOthers.map((item) => (
-          <View className={cx(styles.songCard, styles.otherSongCard)} onClick={() => copy(item.text)} >
-            <View className={cx(styles.songCardText, styles.otherSongCard)} style={{ background: item.background }}>
-              <Text className={cx(styles.otherSongTitle)}>{item.song}</Text>
-              <Text className={cx(styles.otherSongText)}>{item.text}</Text>
-            </View>
-          </View>
-        ))
-      }
-    </View>
+    return renderContent()
   } else {
     return <View className={cx(styles.cardWrap)}>{
       CALLS_COMMON.map((item) => {
