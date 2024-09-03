@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { Button, Input, Text, View } from '@tarojs/components'
 import styles from './index.module.scss'
 import cx from 'classnames';
-import { isEmpty } from 'lodash';
-import { generateUniqueRandomNumbers } from '../../../../utils/util';
-
+import isEmpty from 'lodash/isEmpty';
+import { generateUniqueRandomNumbers, isEmptyValue } from '../../../../utils/util';
 
 function Random() {
   const [min, setMin] = useState<number | undefined>(1)
@@ -17,7 +16,7 @@ function Random() {
     setError(false);
     setResult([]);
 
-    if (min && max && count) {
+    if (!isEmptyValue(min) && !isEmptyValue(max) && !isEmptyValue(count)) {
       const result = generateUniqueRandomNumbers(min, max, count)
       if (isEmpty(result)) {
         setError(true)
