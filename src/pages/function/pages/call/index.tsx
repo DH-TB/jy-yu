@@ -3,12 +3,17 @@ import { View, Text, Image, Input } from '@tarojs/components'
 import styles from './index.module.scss'
 import cx from 'classnames';
 import Taro from '@tarojs/taro'
-import { defaultDarkBackground, randomColor } from '../../../../constants/color';
+import { defaultDarkBackground, randomColor, randomCoverColor } from '../../../../constants/color';
 import { CALLS, CALLS_COMMON, CALLS_OTHER, WORDS } from '../../../../constants/call';
 import { generateUniqueRandomNumbers } from '../../../../utils/util';
 
-// const API1 = 'https://api.vvhan.com/api/moyu'
-const generate = () => `https://api.vvhan.com/api/artText?text=${WORDS[generateUniqueRandomNumbers(0, WORDS.length - 1, 1) as unknown as number].replace(/\n/g, '%0A')}&auther=一《煜》 &color=ff7c00&bgcolor=000000`;
+const generate = () => {
+  const index = generateUniqueRandomNumbers(0, WORDS.length, 1)[0]
+  if(index === WORDS.length) {
+    return 'https://api.vvhan.com/api/moyu'
+  }
+  return `https://api.vvhan.com/api/artText?text=${WORDS[index].replace(/\n/g, '%0A')}&auther=一《煜》 &color=ff7c00&bgcolor=000000`
+}
 
 const Call = (props: { activeTabIndex: number }) => {
   const [showImage, setShowImage] = useState(false)
@@ -53,7 +58,7 @@ const Call = (props: { activeTabIndex: number }) => {
       {
         callOthers.map((item) => (
           <View className={cx(styles.songCard, styles.otherSongCard)} onClick={() => copy(item.text)} >
-            <View className={cx(styles.songCardText, styles.otherSongCard)} style={{ background: item.background }}>
+            <View className={cx(styles.songCardText, styles.otherSongCard)} style={{ background: item.background || randomCoverColor() }}>
               <Text className={cx(styles.otherSongTitle)}>{item.song}</Text>
               <Text className={cx(styles.otherSongText)}>{item.text}</Text>
             </View>

@@ -12,7 +12,8 @@ const color = [
 ]
 
 const degs = [
-    '45deg', '60deg', '80deg', '120deg', '150deg', '180deg', '220deg', '260deg', '300deg', '320deg'
+    '0deg', '25deg', '45deg', '60deg', '75deg', '85deg', '120deg', '135deg', '150deg', '165deg', '180deg',
+    '205deg', '225deg', '245deg', '260deg', '275deg', '300deg', '315deg', '330deg', '345deg', '360deg'
 ]
 
 export const randomColor = () => {
@@ -28,7 +29,40 @@ export const randomColor = () => {
 // const buttonColor = ['#db93a6', '#d37885', '#e9d7d4']
 // main color = '#d37885'
 
-const colors = [
+export const randomCoverColor = () => {
+    const getColor = () => coverColors[Math.floor(Math.random() * coverColors.length)]
+    const deg = degs[Math.floor(Math.random() * (degs.length))]
+    // return `linear-gradient(${deg}, ${getColor()} 0%, ${getColor()} 10%, ${getColor()} 100%)`
+    return `linear-gradient(${deg}, ${getColor()} 0%, ${getColor()} 20%, ${getColor()} 70%)`
+}
+const darkColor = [
+    'rgba(221,221,221,1)',
+    '#d4d4b1',
+    '#DFFFCD',
+    '#ffcdaa',
+    '#ee897f',
+    '#ff5555',
+    '#e03838',
+    '#c1c161',
+    '#c1c161',
+    '#9be15d',
+    '#90F9C4',
+    '#39F3BB',
+    '#35eb93',
+    '#00e3ae',
+    '#2b76b9',
+    '#2cacd1',
+    '#0c3483',
+    '#3D4E81',
+    '#5753C9',
+    '#6E7FF3',
+    '#3d3393',
+    'rgba(110,136,161,1)',
+    'rgba(74,77,103,1)',
+    'rgba(119,125,165,1)',
+]
+
+const coverColors = [
     '#a2b6df',
     '#6b8cce',
     '#fad0c4',
@@ -68,29 +102,4 @@ const colors = [
     '#c69df6'
 ]
 
-const darkColor = [
-    'rgba(221,221,221,1)',
-    '#d4d4b1',
-    '#DFFFCD',
-    '#ffcdaa',
-    '#ee897f',
-    '#ff5555',
-    '#e03838',
-    '#c1c161',
-    '#c1c161',
-    '#9be15d',
-    '#90F9C4',
-    '#39F3BB',
-    '#35eb93',
-    '#00e3ae',
-    '#2b76b9',
-    '#2cacd1',
-    '#0c3483',
-    '#3D4E81',
-    '#5753C9',
-    '#6E7FF3',
-    '#3d3393',
-    'rgba(110,136,161,1)',
-    'rgba(74,77,103,1)',
-    'rgba(119,125,165,1)',
-]
+

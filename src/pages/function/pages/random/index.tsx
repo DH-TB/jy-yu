@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Button, Input, Text, View } from '@tarojs/components'
 import styles from './index.module.scss'
 import cx from 'classnames';
+import { isEmpty } from 'lodash';
+import { generateUniqueRandomNumbers } from '../../../../utils/util';
+
 
 function Random() {
   const [min, setMin] = useState<number | undefined>(1)
@@ -10,22 +13,17 @@ function Random() {
   const [error, setError] = useState(false)
   const [result, setResult] = useState<any[]>([])
 
-  const generateUniqueRandomNumbers = () => {
+  const generate = () => {
     setError(false);
     setResult([]);
 
     if (min && max && count) {
-      if (max - min + 1 < count) {
-        setError(true);
-        return;
+      const result = generateUniqueRandomNumbers(min, max, count)
+      if (isEmpty(result)) {
+        setError(true)
+      } else {
+        setResult(result)
       }
-
-      const randomNumbers = new Set();
-      while (randomNumbers.size < count) {
-        const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-        randomNumbers.add(randomNum);
-      }
-      setResult(Array.from(randomNumbers));
     }
   }
 
@@ -51,7 +49,7 @@ function Random() {
         </View>
         <View className={styles.randomButton}>
           <Button type='primary' className={styles.default} onClick={reset}>重置</Button>
-          <Button type='primary' className={styles.primary} onClick={generateUniqueRandomNumbers}>生成</Button>
+          <Button type='primary' className={styles.primary} onClick={generate}>生成</Button>
         </View>
         {error && <View className={styles.error}>你说说！？？这怎么生成啊</View>}
         {result.length > 0 &&

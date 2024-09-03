@@ -3,49 +3,16 @@ import Taro from '@tarojs/taro'
 import { View, Image, Text, Button } from '@tarojs/components'
 import styles from './index.module.scss'
 import heart from '../../../../image/heart.jpg'
-import text from '../../../../image/text.png'
+import textImage from '../../../../image/text.png'
 import cx from 'classnames'
 import Bar from "../../../component/pages/bar";
 import { defaultBackground } from '../../../../constants/color'
-
-const links = [
-  {
-    image: 'https://wx1.sinaimg.cn/large/0089ZZ9mgy1hqzlz9r1eqg308c08c1kx.gif',
-    value: '【超话】',
-    path: '5072452772433134',
-    shortLink: '#小程序://微博/9VDmM0Wcctap1qJ'
-  },
-  {
-    image: 'https://wx2.sinaimg.cn/large/0089ZZ9mgy1hqzj9q0v22g308c08ckh8.gif',
-    value: '【专贴】',
-    path: '5046827349705134',
-    shortLink: '#小程序://微博/ITdA2qnPtECbR7I'
-  },
-  {
-    image: 'https://wx4.sinaimg.cn/large/0089ZZ9mgy1hqzj9ofvz8g308c08ck97.gif',
-    value: '【B站】',
-    path: '113006595932963'
-  },
-  {
-    image: 'https://wx2.sinaimg.cn/large/0089ZZ9mgy1hqzlz62309g308c08cne8.gif',
-    value: '7EVNVEN',
-    path: 'https://music.163.com/#/artist?id=37189432'
-  },
-  // value: '【TOP歌曲】'
-  // value: '【打工记录】'
-  // value: '【小煜语录】'
-  // value: '【二创安利】'
-  // value: '【应援合集】'
-  // value: '【立绘合集】'
-  // value: '【纪念日子】'
-  // value: '【ALL•煜】'
-]
+import { HOME_SONG_INFO, LINKS } from '../../../../constants/home'
 
 
 function Person() {
+  const { name, text, currentDuration, totalDuration} = HOME_SONG_INFO
   const [showFront, setShowFront] = useState(true)
-  // const statusBarHeight = useMemo(() => Taro.getSystemInfoSync().statusBarHeight, [])
-  // 'https://music.163.com/song/media/outer/url?id=441491828'; // 替换为你的音频地址
 
   const openInBrowser = (item) => {
     Taro.setClipboardData({
@@ -110,7 +77,7 @@ function Person() {
       shortLink: '#小程序://网易云音乐听歌/QCIDlOYhslKnkPv'
     })
   }
-
+  
   return (
     <View className={styles.home}>
       <Bar />
@@ -118,8 +85,8 @@ function Person() {
         <View className={styles.songInfo}>
           <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon} style={{ background: defaultBackground }} />
           <View className={styles.song}>
-            <View className={styles.songText}>没有办法 拿你没有办法</View>
-            <View className={styles.songName}>7EVNVEN/没有办法<Text className={styles.original}>原创</Text></View>
+            <View className={styles.songText}>{text}</View>
+            <View className={styles.songName}>{name}<Text className={styles.original}>原创</Text></View>
           </View>
           <View className={styles.box}>
             <View className={styles.p}></View>
@@ -130,11 +97,11 @@ function Person() {
           </View>
         </View>
         <View className={styles.songProcessWrap}>
-          01:03
+          {currentDuration}
           <View className={styles.songProcess}>
             <View className={styles.process}></View>
           </View>
-          03:07
+          {totalDuration}
         </View>
         <View className={styles.playIconWrap}>
           <View className='at-icon at-icon-prev'></View>
@@ -164,7 +131,7 @@ function Person() {
       </View>
       <View className={styles.cardContainer}>
         <View className={styles.cardWrap}>
-          {links.map((item, index) =>
+          {LINKS.map((item, index) =>
             <View className={cx(styles.card)} onClick={() => jump(item, index)}>
               <Image src={item.image} className={styles.cardImage} defaultSource={heart} />
               <View>{item.value}</View>
@@ -178,7 +145,7 @@ function Person() {
             style={{ background: defaultBackground }}
             showMenuByLongpress
           />
-          <Image src={text} className={styles.text} />
+          <Image src={textImage} className={styles.text} />
           <Image
             src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'}
             className={styles.qrIcon}
