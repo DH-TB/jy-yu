@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Image, Text } from '@tarojs/components'
+import { View, Image, Text, Button } from '@tarojs/components'
 import styles from './index.module.scss'
 import heart from '../../../../image/heart.jpg'
 import text from '../../../../image/text.png'
@@ -157,6 +157,10 @@ function Person() {
       <View className={styles.info}>
         <Image src={heart} className={styles.icon} />
         <View className={styles.typing}>欢迎来到比比芭比啵比星球...</View>
+        <View className={cx(styles.messageWrap)}>
+          <Button className={cx(styles.contact)} openType='contact'></Button>
+          <View className={cx(styles.message, 'at-icon at-icon-message')}></View>
+        </View>
       </View>
       <View className={styles.cardContainer}>
         <View className={styles.cardWrap}>

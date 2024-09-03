@@ -4,6 +4,8 @@
   background-image: linear-gradient(0deg, #e9d7d4 0%, rgba(#d37885, 0.6) 0%, #e9d7d4 100%);
   height: 100vh;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
 
   .songWrap {
     margin: 32px 0;
@@ -61,7 +63,6 @@
       font-size: 16px;
     }
   }
-
 
   .songProcessWrap {
     color: #f2f2f2;
@@ -194,20 +195,38 @@
     .typing {
       height: 42rpx;
       margin-top: 16rpx;
-      width: 80vw;
+      flex: 1;
       border-right: 1px solid transparent;
       animation: typing 3.5s steps(37, end), blink-caret .75s step-end;
       word-break: break-all;
       overflow: hidden;
     }
 
+    .messageWrap {
+      width: 60px;
+      right: 24px;
+      margin-top: 10px;
+      position: absolute;
+    }
+    
+    .message {
+      font-size: 40px;
+    }
+
+    .contact {
+      opacity: 0;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+    }
+
     /* 打印效果 */
     @keyframes typing {
       from {
-        width: 0;
+        flex: 0;
       }
       to {
-        width: 80vw;
+        flex: 1;
       }
     }
     /* 光标闪啊闪 */
@@ -258,28 +277,28 @@
   }
 
   .p:first-child {
-    animation: move1 2s ease infinite;
+    animation: move1 1s ease infinite;
     animation-delay: .1s;
   }
 
   .p:nth-of-type(2) {
-    animation: move2 2s ease infinite;
+    animation: move2 1s ease infinite;
     animation-delay: .3s;
   }
 
   .p:nth-of-type(3) {
-    animation: move3 2s ease infinite;
+    animation: move3 1s ease infinite;
     animation-delay: .5s;
   }
 
   .p:nth-of-type(4) {
-    animation: move2 2s ease infinite;
-    animation-delay: .7s;
+    animation: move2 1s ease infinite;
+    animation-delay: .5s;
   }
 
   .p:nth-of-type(5) {
-    animation: move1 2s ease infinite;
-    animation-delay: .7s;
+    animation: move1 1s ease infinite;
+    animation-delay: .5s;
   }
 
   @keyframes move1 {
