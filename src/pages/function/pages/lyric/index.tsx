@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
+import cx from 'classnames'
 import styles from './index.module.scss'
-import { LYRIC } from '../../../../constants/call'
+import { LYRIC, SPECIAL_LYRIC } from '../../../../constants/call'
 import { generateUniqueRandomNumbers } from '../../../../utils/util'
 import name from '../../../../image/name.png'
 
@@ -80,9 +81,10 @@ function Lyric() {
         </View>
       }
       <View className={styles.lyric} onClick={refresh}>
-        {data.map((item) => <View className={styles.text} style={{ ...getStyle() }}>
-          {LYRIC[item as number]}
-        </View>)}
+        {data.map((item) =>
+          <View className={cx(styles.text, SPECIAL_LYRIC.includes(LYRIC[item as number]) && styles.border)} style={{ ...getStyle() }}>
+            {LYRIC[item as number]}
+          </View>)}
       </View>
     </View>
   )

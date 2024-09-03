@@ -4,13 +4,16 @@ import styles from './index.module.scss'
 import cx from 'classnames';
 import Taro from '@tarojs/taro'
 import { defaultDarkBackground, randomColor, randomCoverColor } from '../../../../constants/color';
-import { CALLS, CALLS_COMMON, CALLS_OTHER, WORDS } from '../../../../constants/call';
+import { CALLS, CALLS_COMMON, CALLS_OTHER, SPECIAL_WORDS, WORDS } from '../../../../constants/call';
 import { generateUniqueRandomNumbers } from '../../../../utils/util';
 
 const generate = () => {
-  const index = generateUniqueRandomNumbers(0, WORDS.length, 1)[0]
+  const index = generateUniqueRandomNumbers(0, WORDS.length + SPECIAL_WORDS.length, 1)[0] as number
   if(index === WORDS.length) {
     return 'https://api.vvhan.com/api/moyu'
+  }
+  if(index > WORDS.length) {
+    return `https://api.vvhan.com/api/artText?text=${SPECIAL_WORDS[index - WORDS.length -1].replace(/\n/g, '%0A')}&auther=&color=ff7c00&bgcolor=000000`
   }
   return `https://api.vvhan.com/api/artText?text=${WORDS[index].replace(/\n/g, '%0A')}&auther=一《煜》 &color=ff7c00&bgcolor=000000`
 }
