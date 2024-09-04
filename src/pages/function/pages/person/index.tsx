@@ -11,7 +11,7 @@ import { HOME_SONG_INFO, LINKS } from '../../../../constants/home'
 
 
 function Person() {
-  const { name, text, currentDuration, totalDuration} = HOME_SONG_INFO
+  const { name, text, currentDuration, totalDuration } = HOME_SONG_INFO
   const [showFront, setShowFront] = useState(true)
 
   const openInBrowser = (item) => {
@@ -77,81 +77,83 @@ function Person() {
       shortLink: '#小程序://网易云音乐听歌/QCIDlOYhslKnkPv'
     })
   }
-  
+
   return (
     <View className={styles.home}>
       <Bar />
-      <View className={styles.songWrap}>
-        <View className={styles.songInfo}>
-          <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon} style={{ background: defaultBackground }} />
-          <View className={styles.song}>
-            <View className={styles.songText}>{text}</View>
-            <View className={styles.songName}>{name}<Text className={styles.original}>原创</Text></View>
-          </View>
-          <View className={styles.box}>
-            <View className={styles.p}></View>
-            <View className={styles.p}></View>
-            <View className={styles.p}></View>
-            <View className={styles.p}></View>
-            <View className={styles.p}></View>
-          </View>
-        </View>
-        <View className={styles.songProcessWrap}>
-          {currentDuration}
-          <View className={styles.songProcess}>
-            <View className={styles.process}></View>
-          </View>
-          {totalDuration}
-        </View>
-        <View className={styles.playIconWrap}>
-          <View className='at-icon at-icon-prev'></View>
-          <View className={cx(styles.playIcon, 'at-icon at-icon-play')} onClick={showToast}></View>
-          <View className='at-icon at-icon-next'></View>
-        </View>
-      </View>
-      <View className={cx(styles.personInfo, showFront && styles.active)} onClick={() => setShowFront(!showFront)}>
-        <Image
-          src={"https://wx2.sinaimg.cn/large/005SF7JFly1ht3ksydjfvj30uu0ho77c.jpg"}
-          className={cx(styles.person, styles.person1)}
-          style={{ background: defaultBackground }}
-        />
-        <Image
-          src={"https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg"}
-          className={cx(styles.person, styles.person2)}
-          style={{ background: defaultBackground }}
-        />
-      </View>
-      <View className={styles.info}>
-        <Image src={heart} className={styles.icon} />
-        <View className={styles.typing}>欢迎来到比比芭比啵比星球...</View>
-        <View className={cx(styles.messageWrap)}>
-          <Button className={cx(styles.contact)} openType='contact'></Button>
-          <View className={cx(styles.message, 'at-icon at-icon-message')}></View>
-        </View>
-      </View>
-      <View className={styles.cardContainer}>
-        <View className={styles.cardWrap}>
-          {LINKS.map((item, index) =>
-            <View className={cx(styles.card)} onClick={() => jump(item, index)}>
-              <Image src={item.image} className={styles.cardImage} defaultSource={heart} />
-              <View>{item.value}</View>
+      <View className={styles.homeContent}>
+        <View className={styles.songWrap}>
+          <View className={styles.songInfo}>
+            <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon} style={{ background: defaultBackground }} />
+            <View className={styles.song}>
+              <View className={styles.songText}>{text}</View>
+              <View className={styles.songName}>{name}<Text className={styles.original}>原创</Text></View>
             </View>
-          )}
+            <View className={styles.box}>
+              <View className={styles.p}></View>
+              <View className={styles.p}></View>
+              <View className={styles.p}></View>
+              <View className={styles.p}></View>
+              <View className={styles.p}></View>
+            </View>
+          </View>
+          <View className={styles.songProcessWrap}>
+            {currentDuration}
+            <View className={styles.songProcess}>
+              <View className={styles.process}></View>
+            </View>
+            {totalDuration}
+          </View>
+          <View className={styles.playIconWrap}>
+            <View className='at-icon at-icon-prev'></View>
+            <View className={cx(styles.playIcon, 'at-icon at-icon-play')} onClick={showToast}></View>
+            <View className='at-icon at-icon-next'></View>
+          </View>
         </View>
-        <View className={styles.qrIconWrap}>
+        <View className={cx(styles.personInfo, showFront && styles.active)} onClick={() => setShowFront(!showFront)}>
           <Image
-            src={'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg'}
-            className={styles.qrIcon}
+            src={"https://wx2.sinaimg.cn/large/005SF7JFly1ht3ksydjfvj30uu0ho77c.jpg"}
+            className={cx(styles.person, styles.person1)}
             style={{ background: defaultBackground }}
-            showMenuByLongpress
           />
-          <Image src={textImage} className={styles.text} />
           <Image
-            src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'}
-            className={styles.qrIcon}
+            src={"https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg"}
+            className={cx(styles.person, styles.person2)}
             style={{ background: defaultBackground }}
-            showMenuByLongpress
           />
+        </View>
+        <View className={styles.info}>
+          <Image src={heart} className={styles.icon} />
+          <View className={styles.typing}>欢迎来到比比芭比啵比星球...</View>
+          <View className={cx(styles.messageWrap)}>
+            <Button className={cx(styles.contact)} openType='contact'></Button>
+            <View className={cx(styles.message, 'at-icon at-icon-message')}></View>
+          </View>
+        </View>
+        <View className={styles.cardContainer}>
+          <View className={styles.cardWrap}>
+            {LINKS.map((item, index) =>
+              <View className={cx(styles.card)} onClick={() => jump(item, index)}>
+                <Image src={item.image} className={styles.cardImage} defaultSource={heart} />
+                <View>{item.value}</View>
+              </View>
+            )}
+          </View>
+          <View className={styles.qrIconWrap}>
+            <Image
+              src={'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg'}
+              className={styles.qrIcon}
+              style={{ background: defaultBackground }}
+              showMenuByLongpress
+            />
+            <Image src={textImage} className={styles.text} />
+            <Image
+              src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'}
+              className={styles.qrIcon}
+              style={{ background: defaultBackground }}
+              showMenuByLongpress
+            />
+          </View>
         </View>
       </View>
     </View>
