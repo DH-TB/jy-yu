@@ -15,7 +15,7 @@ $halfWidth: calc($width / 2);
     .text {
       display: flex;
       background-color: white;
-      padding: 20px;
+      padding: 16px;
       border-radius: 16px;
       color: #666;
       width: fit-content;
@@ -23,7 +23,7 @@ $halfWidth: calc($width / 2);
     }
 
     .border {
-      border: 1px solid #db93a6;
+      color: rgb(170 65 67);
     }
   }
 

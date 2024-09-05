@@ -5,6 +5,8 @@ export const SPECIAL_WORDS = [
 ]
 
 export const WORDS = [
+    '\n\n\n\n拜托拜托啦',
+    '\n\n\n我会鼠的\n真的会鼠的\n真的',
     '\n\n只要有一个人\n\n得到治愈\n这首歌就没有白唱',
     '\n\n不管我们\n\n都来自哪里\n一起往前走叭～',
     '\n\n\n天黑请闭眼\n煜言家请睁眼',

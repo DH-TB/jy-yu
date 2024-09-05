@@ -35,6 +35,12 @@ export const randomCoverColor = () => {
     // return `linear-gradient(${deg}, ${getColor()} 0%, ${getColor()} 10%, ${getColor()} 100%)`
     return `linear-gradient(${deg}, ${getColor()} 0%, ${getColor()} 20%, ${getColor()} 70%)`
 }
+
+const testColor = [
+    // 'rgb(252 108 7)',
+    // 'rgb(91 118 142)',
+    // 'rgb(117 152 162)',
+]
 const darkColor = [
     'rgba(221,221,221,1)',
     '#d4d4b1',

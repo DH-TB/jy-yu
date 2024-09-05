@@ -70,7 +70,7 @@
       color: #666;
       left: 12px;
     }
- 
+
     .input {
       flex: 1;
       height: 74px;
@@ -84,14 +84,18 @@
 }
 
 .artTextWrap {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  background: radial-gradient(circle, rgb(255, 124, 0) 20%, #e6a064 48%, #fff7f3 80%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: radial-gradient(circle, rgb(255, 124, 0) 20%, #e6a064 48%, #fff7f3 100%);
   // background: radial-gradient(circle, rgb(255, 124, 0) 5%, #e6a064 50%, #fff7f3 80%);
 
   .artTextImage {
-    margin-top: 200px;
+    margin-top: calc(50vh - 350px);
+    margin-left: calc(50vw - 275px);
     height: 700px;
     width: 550px;
     border-radius: 24px;
@@ -99,16 +103,114 @@
     transform-origin: center;
     animation: flyIn 2s ease-out forwards;
   }
-  
+
   @keyframes flyIn {
     0% {
-      transform: translateX(-100vw) scale(0) rotate(0deg); /* 从屏幕左侧外面开始 */
+      transform: translateX(-100vw) scale(0) rotate(0deg);
+      /* 从屏幕左侧外面开始 */
     }
+
     50% {
-      transform: translateX(50vw) scale(1.2) rotate(720deg); /* 旋转2圈并放大 */
+      transform: translateX(50vw) scale(1.2) rotate(720deg);
+      /* 旋转2圈并放大 */
     }
+
     100% {
-      transform: translateX(0) scale(1) rotate(1080deg); /* 旋转3圈到最终位置 */
+      transform: translateX(0) scale(1) rotate(1080deg);
+      /* 旋转3圈到最终位置 */
     }
+  }
+}
+
+$color: rgb(170 65 67);
+$width: 375px;
+$halfWidth: calc($width / 2);
+
+.heartWrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+
+  .heart {
+    width: $width;
+    height: $width;
+    background-color: $color;
+    transform: rotate(45deg);
+    position: relative;
+    box-shadow: 5px 5px $width 0 $color;
+
+    .name {
+      z-index: 1;
+      // 书摘接口返回的
+      // width: 280px;
+      // height: 320px;
+
+      // 两行文字的
+      // top: 60px;
+      // right: 90px;
+      // width: 300px;
+      // height: 140px;
+
+      top: 80px;
+      right: 30px;
+      width: 450px;
+      height: 54px;
+      position: absolute;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      position: absolute;
+      content: " ";
+      width: $width;
+      height: $width;
+      top: -$halfWidth;
+      left: 0;
+      border-radius: 50%;
+      background-color: $color;
+      box-shadow: 0 0 $width 0 $color;
+    }
+
+    &::after {
+      position: absolute;
+      content: " ";
+      width: $width;
+      height: $width;
+      top: 0;
+      left: -$halfWidth;
+      border-radius: 50%;
+      background-color: $color;
+      box-shadow: 0 0 $width 0 $color;
+    }
+  }
+
+
+}
+
+.heartInput {
+  position: relative;
+  left: calc(50vw - $halfWidth);
+  top: calc(50vh - calc($halfWidth));
+  width: $width;
+  height: $width;
+  z-index: 2;
+  
+  .inputWrap {
+    display: flex;
+    color: white;
+    position: absolute;
+    height: 80px;
+    right: 50px;
+    top: 240px;
+  }
+
+  .input {
+    width: 100px;
+    text-align: center;
+    border-bottom: 1px solid white;
   }
 }
