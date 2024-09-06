@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import cx from 'classnames'
@@ -6,6 +6,7 @@ import styles from './index.module.scss'
 import { LYRIC, SPECIAL_LYRIC } from '../../../../constants/call'
 import { generateUniqueRandomNumbers } from '../../../../utils/util'
 import name from '../../../../image/name.png'
+import useAudioPlayer from '../../../../hook/audio'
 
 const RADIO = ['2623267833', '2623263920', '2623265844', '2623273307', '2623272380']
 
@@ -22,33 +23,22 @@ const getStyle = () => {
 
 function Lyric() {
   const [count, setCount] = useState(0)
-  const [playing, setPlaying] = useState(false)
   const [data, setData] = useState(generate())
-  const showHeart = useMemo(() => count === 72, [count])
-  const audio = useRef<any>()
+  const showHeart = useMemo(() => count === 2, [count])
+  const handleAudioEnd = () => {
+    setCount(0);
+  };
+  const { playAudio } = useAudioPlayer(handleAudioEnd);
+
+  const onClick = () => {
+    const url = `https://music.163.com/song/media/outer/url?id=${getRandom()}`
+    playAudio(url);
+  };
 
   const refresh = () => {
     setCount(count + 1)
     setData(generate())
   }
-
-  useEffect(() => {
-    const audioContext = Taro.createInnerAudioContext();
-    audio.current = audioContext;
-
-    audio.current.onPlay(() => {
-      console.log('开始播放');
-    });
-
-    audio.current.onEnded(() => {
-      setCount(0)
-      setPlaying(false)
-    });
-
-    return () => {
-      audio.current.destroy();
-    };
-  }, []);
 
   useEffect(() => {
     if (showHeart) {
@@ -58,18 +48,9 @@ function Lyric() {
       })
     }
   }, [showHeart])
+  
   const getRandom = () => RADIO[Math.floor(Math.random() * RADIO.length)]
 
-  const onClick = () => {
-    if (playing) {
-      return
-    }
-    if (audio.current) {
-      setPlaying(true)
-      audio.current.src = `https://music.163.com/song/media/outer/url?id=${getRandom()}`
-      audio.current.play()
-    }
-  }
 
   return (
     <View className={styles.lyricWrap}>
