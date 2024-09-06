@@ -70,7 +70,6 @@ const getToday = () => {
 // 根据当前时间计算应该显示的图片索引
 export const getIndex = () => {
   const currentIndex = Math.floor(getToday() / 3) % DAY_IMAGES.length - 1;
-  console.log(currentIndex, getToday(), 89)
   if (currentIndex < 0 || currentIndex >= DAY_IMAGES.length) {
     return 0
   }

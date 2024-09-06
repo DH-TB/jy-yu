@@ -29,7 +29,7 @@ const Call = (props: { activeTabIndex: number }) => {
     CALLS_OTHER.filter((item) => item.song.toLocaleUpperCase().includes(searchText.toLocaleUpperCase())
     ), [searchText]);
   const { playAudio } = useAudioPlayer();
-  
+
   useEffect(() => {
     onReset()
   }, [props.activeTabIndex])
@@ -49,7 +49,7 @@ const Call = (props: { activeTabIndex: number }) => {
       setShowImage(true)
       setImageUrl(generate())
     }
-    if (data.detail.value === '7EVN1lVEN') {
+    if (data.detail.value.toLocaleUpperCase() === '7EVN1LVEN' || data.detail.value.toLocaleUpperCase() === 'JY煜') {
       setShowInput(true)
     }
     if (data.detail.value === '大叔不要跑') {

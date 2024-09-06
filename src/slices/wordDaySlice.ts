@@ -14,7 +14,7 @@ export const wordDaySlice = createSlice({
     initialState: { data: initialState, success: false },
     reducers: {
         saveWordDay: (state, action) => {
-            state.data = state.data.map((item, index) => ({
+            state.data = getIndex() === 13 ? state.data : state.data.map((item, index) => ({
                 ...item,
                 hitokoto: action.payload[index].hitokoto,
                 from: action.payload[index].from,

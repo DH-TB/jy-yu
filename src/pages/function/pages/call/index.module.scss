@@ -90,8 +90,8 @@
   left: 0;
   right: 0;
   z-index: 1;
-  background: radial-gradient(circle, rgb(255, 124, 0) 20%, #e6a064 48%, #fff7f3 100%);
-  // background: radial-gradient(circle, rgb(255, 124, 0) 5%, #e6a064 50%, #fff7f3 80%);
+  // background: radial-gradient(circle, rgb(255, 124, 0) 20%, #e6a064 48%, #fff7f3 100%);
+  background: radial-gradient(circle, #e6a064 2%, rgb(255, 124, 0) 35%, #fff7f3 100%);
 
   .artTextImage {
     margin-top: calc(50vh - 350px);

@@ -8,6 +8,7 @@ const IMAGE1 = [
   'https://wx3.sinaimg.cn/large/005SF7JFly1ht3kd1c55pj30rr0s3aez.jpg',
   'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kcx8dd1j30r90retgs.jpg',
 ]
+
 // 好看
 const IMAGE2 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rly3i47j30u0114tj9.jpg',
@@ -20,15 +21,17 @@ const IMAGE2 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rm2x0zfj30zk17zx24.jpg',
 ]
 
-// 烟花
+// 小丑🤡
 const IMAGE3 = [
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0giy046j30xr1ksww0.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0gjdq4uj30xr1ks4hm.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0gjrnypj30xr1ksh42.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0gk7hlpj30xq1krdx5.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0gkm9w7j30vu1hgany.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0gifr1gj30xr1ks4f8.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0glh8woj30xq1krh3k.jpg'
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htefd76hcvj30qx0xan52.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htefd7ixzkj30u00yw7dd.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htefd7ssavj30qx0zs42j.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htefd81vmvj30mz0qadll.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htefd8au14j30u0114ju0.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htefd6ucakj30hr0ncwiz.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htefd9da41j30uq18bafs.jpg',
+  // 'https://wx2.sinaimg.cn/large/008BXgJxly1htefd8lcayj30mr0q8dj3.jpg',
+  // 'https://wx3.sinaimg.cn/large/008BXgJxly1htefd8uewgj30u01100ti.jpg',
 ]
 
 // 今天看云 好看
@@ -86,9 +89,19 @@ const IMAGE8 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1hte24lx72kj30u0140duv.jpg',
 ]
 
-// 差5和6
-// 三图
+// 烟花
 const IMAGE9 = [
+  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0giy046j30xr1ksww0.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0gjdq4uj30xr1ks4hm.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0gjrnypj30xr1ksh42.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0gk7hlpj30xq1krdx5.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0gkm9w7j30vu1hgany.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0gifr1gj30xr1ks4f8.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0glh8woj30xq1krh3k.jpg'
+]
+
+// 三图
+const IMAGE10 = [
   'https://wx2.sinaimg.cn/large/008BXgJxly1htdt93f6o1j30u0113ac8.jpg',
   'https://wx3.sinaimg.cn/large/008BXgJxly1htdt93pig6j30u0111q67.jpg',
   'https://wx4.sinaimg.cn/large/008BXgJxly1htdt932qpsj30u0116jv7.jpg',
@@ -98,7 +111,7 @@ const IMAGE9 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1htdt94yulnj30u011977i.jpg',
 ]
 
-const IMAGE10 = [
+const IMAGE11 = [
   'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
   'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
   'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
@@ -115,11 +128,11 @@ export const DAY_IMAGES = [
   IMAGE8,
   IMAGE9,
   IMAGE10,
-  IMAGE10,
-  IMAGE10,
-  IMAGE10,
-  IMAGE10,
-  IMAGE10,
+  IMAGE11,
+  IMAGE11,
+  IMAGE11,
+  IMAGE11,
+  IMAGE11,
   IMAGE1,
   IMAGE2,
   IMAGE3,
@@ -135,6 +148,7 @@ const TEXT1 = [
   '要勇敢 不要盘旋',
   '你要为喜欢的东西奔跑 走路真的来不及'
 ]
+
 const TEXT2 = [
   '不要迷茫 不要慌张 太阳下山还有月光',
   '希望阳光一直明媚 希望我们万事顺遂',
@@ -142,17 +156,22 @@ const TEXT2 = [
   '岁月欢喜一步步 成就人间朝与幕',
   '若你决定灿烂 山无遮 海无拦',
   '夕阳总会落在你身上 你也会快乐一场',
-  '为者常成 行者常至',
 ]
+
 const TEXT3 = [
-  '世界需要讲道理 而我永远向着你',
-  '永远有人十七岁 但没有人永远十七岁',
-  '18岁的晚风无法抵达十年后的夜晚',
-  '喜欢的东西依旧喜欢 但不想再拥有了',
-  '命运通过选择 一次次让你去验证你是谁',
-  '时光清浅 安静和热闹我都喜欢',
-  '很多事没有来日方长 我要你现在快乐',
+  '这里没有笑梗 这不是笑话',
+  '我现在一无所有 没有什么能再伤害到我了',
+  '世界上有两个我 一个假装开心 一个真的难过',
+  '你早晚要为生计奔波',
+  '我只希望我的死 比活着更有价值',
+  '在你介绍我出场的时候，可不可以称我为“小丑”？',
+  '当个坏人吧，好人没前途，除了哭，就是细数痛苦',
+  // '人们总想让你得体一点，就好像你不得体一样。',
+  // '当我小时候告诉别人我想当一个谐星，大家都笑我，现在没人在笑了。',
+  // '我曾以为，我的人生是场悲剧。但现在我意识到，它原来是场喜剧。',
+  // '我还在原地等你，你却已忘记曾经来过这里',
 ]
+
 const TEXT4 = [
   '今天看云。',
   '他们都笑你 偏偏你最好笑',
@@ -203,16 +222,26 @@ const TEXT8 = [
 ]
 
 const TEXT9 = [
+  '世界需要讲道理 而我永远向着你',
+  '永远有人十七岁 但没有人永远十七岁',
+  '18岁的晚风无法抵达十年后的夜晚',
+  '喜欢的东西依旧喜欢 但不想再拥有了',
+  '命运通过选择 一次次让你去验证你是谁',
+  '时光清浅 安静和热闹我都喜欢',
+  '很多事没有来日方长 我要你现在快乐',
+]
+
+const TEXT10 = [
   '我将目不斜视 而且永远如此',
   '有些人光是遇到就已经赚到了',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
+  '不被理解的感觉真叫人落寞',
+  '为者常成 行者常至',
   '他们都笑你 偏偏你最好笑',
   '他们都笑你 偏偏你最好笑',
   '他们都笑你 偏偏你最好笑',
 ]
 
-const TEXT10 = [
+const TEXT11 = [
   '他们都笑你 偏偏你最好笑',
   '他们都笑你 偏偏你最好笑',
   '他们都笑你 偏偏你最好笑',
@@ -229,11 +258,11 @@ export const DAY_TEXTS = [
   TEXT8,
   TEXT9,
   TEXT10,
-  TEXT10,
-  TEXT10,
-  TEXT10,
-  TEXT10,
-  TEXT10,
+  TEXT11,
+  TEXT11,
+  TEXT11,
+  TEXT11,
+  TEXT11,
   TEXT1,
   TEXT2,
   TEXT3,

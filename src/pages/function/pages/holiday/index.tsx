@@ -43,7 +43,7 @@ function Holiday() {
       url: 'https://api.vvhan.com/api/text/joke',
       method: 'GET'
     }).then((res) => {
-      setJoke(`冷笑话(好笑程度不详)：${res.data}`)
+      setJoke(`🤡 (好笑程度不详)：${res.data}`)
     })
     Taro.request({
       url: 'https://api.vvhan.com/api/ian/shici',
