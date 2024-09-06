@@ -8,10 +8,12 @@ import cx from 'classnames'
 import Bar from "../../../component/pages/bar";
 import { defaultBackground } from '../../../../constants/color'
 import { HOME_SONG_INFO, LINKS } from '../../../../constants/home'
+import { generateUniqueRandomNumbers, getIndex } from '../../../../utils/util'
 
-
+// const generate = () => HOME_SONG_INFO[generateUniqueRandomNumbers(0, HOME_SONG_INFO.length - 1, 1) as unknown as number]
+const generate = () => HOME_SONG_INFO[getIndex()]
 function Person() {
-  const { name, text, currentDuration, totalDuration } = HOME_SONG_INFO
+  const { name, text, currentDuration, totalDuration, shortLink } = generate()
   const [showFront, setShowFront] = useState(true)
 
   const openInBrowser = (item) => {
@@ -74,7 +76,7 @@ function Person() {
 
   const showToast = () => {
     jumpByShortLink({
-      shortLink: '#小程序://网易云音乐听歌/QCIDlOYhslKnkPv'
+      shortLink
     })
   }
 
@@ -87,7 +89,10 @@ function Person() {
             <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon} style={{ background: defaultBackground }} />
             <View className={styles.song}>
               <View className={styles.songText}>{text}</View>
-              <View className={styles.songName}>{name}<Text className={styles.original}>原创</Text></View>
+              <View className={styles.songNameWrap}>
+                <View className={styles.songName}>{name}</View>
+                <Text className={styles.original}>原创</Text>
+              </View>
             </View>
             <View className={styles.box}>
               <View className={styles.p}></View>

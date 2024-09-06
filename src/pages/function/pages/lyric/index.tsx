@@ -24,7 +24,7 @@ const getStyle = () => {
 function Lyric() {
   const [count, setCount] = useState(0)
   const [data, setData] = useState(generate())
-  const showHeart = useMemo(() => count === 2, [count])
+  const showHeart = useMemo(() => count === 72, [count])
   const handleAudioEnd = () => {
     setCount(0);
   };

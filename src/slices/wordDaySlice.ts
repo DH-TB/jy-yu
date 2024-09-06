@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { DAY_IMAGES, DAY_TEXTS } from '../constants/recommend';
+import { DAY_TEXTS, DAY_IMAGES } from '../constants/recommend';
+import { getIndex } from '../utils/util';
 
 const initialState = Array.from({ length: 7 }, (_, i) => ({
-    image: DAY_IMAGES[i],
-    hitokoto: DAY_TEXTS[i],
+    image: DAY_IMAGES[getIndex()][i],
+    hitokoto: DAY_TEXTS[getIndex()][i],
     from: '',
     from_who: ''
 }))

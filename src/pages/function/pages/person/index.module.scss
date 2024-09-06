@@ -48,14 +48,25 @@
     .songText {
       color: white;
       font-weight: 600;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+      // width: calc(100vw - 330px);
+    }
+
+    .songNameWrap {
+      display: flex;
+      align-items: center;
     }
 
     .songName {
       margin: 12px 0;
       color: #f2f2f2;
       font-size: 26px;
-      display: flex;
-      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: calc(100vw - 400px);
     }
 
     .original {
