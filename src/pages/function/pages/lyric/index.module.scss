@@ -2,109 +2,106 @@ $color: rgb(188 76 79);
 $width: 160px;
 $halfWidth: calc($width / 2);
 
-.lyricWrap {
+
+.lyric {
+  background: url('../../../../image/love.png') no-repeat center top;
+  background-size: contain;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
   flex: 1;
 
-  .lyric {
-    background: url('../../../../image/love.png') no-repeat center top;
-    background-size: contain;
-    opacity: 0.5;
+  .text {
     display: flex;
-    flex-direction: column;
-
-    .text {
-      display: flex;
-      background-color: white;
-      padding: 16px;
-      border-radius: 16px;
-      color: #666;
-      width: fit-content;
-      margin: 24rpx;
-    }
-
-    .border {
-      color: rgb(170 65 67);
-    }
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    color: #666;
+    width: fit-content;
+    margin: 24rpx;
   }
 
-  .heartWrap {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  
-    .heart {
-      left: calc(50vw - $halfWidth);
-      top: calc(50vh - calc($halfWidth / 2));
-      position: relative;
+  .border {
+    color: rgb(170 65 67);
+  }
+}
+
+.heartWrap {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+
+  .heart {
+    left: calc(50vw - $halfWidth);
+    top: calc(50vh - calc($halfWidth));
+    position: relative;
+    width: $width;
+    height: $width;
+    background-color: $color;
+    transform: rotate(45deg);
+    position: relative;
+    box-shadow: 5px 5px $width 0 $color;
+    animation: heart .8s linear infinite;
+
+    .name {
+      z-index: 1;
+      width: 130px;
+      height: 100px;
+      position: absolute;
+      animation: name .8s linear infinite;
+    }
+
+    &::before {
+      position: absolute;
+      content: " ";
       width: $width;
       height: $width;
+      top: -$halfWidth;
+      left: 0;
+      border-radius: 50%;
       background-color: $color;
-      transform: rotate(45deg);
-      position: relative;
-      box-shadow: 5px 5px $width 0 $color;
-      animation: heart .8s linear infinite;
-    
-      .name {
-        z-index: 1;
-        width: 130px;
-        height: 100px;
-        position: absolute;
-        animation: name .8s linear infinite;
+      box-shadow: 0 0 $width 0 $color;
+    }
+
+    &::after {
+      position: absolute;
+      content: " ";
+      width: $width;
+      height: $width;
+      top: 0;
+      left: -$halfWidth;
+      border-radius: 50%;
+      background-color: $color;
+      box-shadow: 0 0 $width 0 $color;
+    }
+
+    @keyframes name {
+      0% {
+        transform: rotate(-45deg) scale(1.1);
       }
-    
-      &::before {
-        position: absolute;
-        content: " ";
-        width: $width;
-        height: $width;
-        top: -$halfWidth;
-        left: 0;
-        border-radius: 50%;
-        background-color: $color;
-        box-shadow: 0 0 $width 0 $color;
+
+      75% {
+        transform: rotate(-45deg) scale(1);
       }
-    
-      &::after {
-        position: absolute;
-        content: " ";
-        width: $width;
-        height: $width;
-        top: 0;
-        left: -$halfWidth;
-        border-radius: 50%;
-        background-color: $color;
-        box-shadow: 0 0 $width 0 $color;
+
+      100% {
+        transform: rotate(-45deg) scale(0.8);
       }
-    
-      @keyframes name {
-        0% {
-          transform: rotate(-45deg) scale(1.1);
-        }
-    
-        75% {
-          transform: rotate(-45deg) scale(1);
-        }
-    
-        100% {
-          transform: rotate(-45deg) scale(0.8);
-        }
+    }
+
+    @keyframes heart {
+      0% {
+        transform: rotate(45deg) scale(1.1);
       }
-    
-      @keyframes heart {
-        0% {
-          transform: rotate(45deg) scale(1.1);
-        }
-    
-        75% {
-          transform: rotate(45deg) scale(1);
-        }
-    
-        100% {
-          transform: rotate(45deg) scale(0.8);
-        }
+
+      75% {
+        transform: rotate(45deg) scale(1);
+      }
+
+      100% {
+        transform: rotate(45deg) scale(0.8);
       }
     }
   }

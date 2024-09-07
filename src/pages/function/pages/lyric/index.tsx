@@ -48,14 +48,14 @@ function Lyric() {
       })
     }
   }, [showHeart])
-  
+
   const getRandom = () => RADIO[Math.floor(Math.random() * RADIO.length)]
 
 
   return (
-    <View className={styles.lyricWrap}>
+    <>
       {showHeart &&
-        <View className={styles.heartWrap} catchMove>
+        <View className={styles.heartWrap}>
           <View className={styles.heart}>
             <Image src={name} className={styles.name} onClick={onClick} />
           </View>
@@ -67,7 +67,7 @@ function Lyric() {
             {LYRIC[item as number]}
           </View>)}
       </View>
-    </View>
+    </>
   )
 }
 
