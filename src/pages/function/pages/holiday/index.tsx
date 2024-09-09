@@ -39,6 +39,10 @@ function Holiday() {
         ...data.lunar,
       })
     })
+    onRefresh()
+  }, [])
+
+  const onRefresh = () => {
     Taro.request({
       url: 'https://api.vvhan.com/api/text/joke',
       method: 'GET'
@@ -51,10 +55,10 @@ function Holiday() {
     }).then((res) => {
       setPoetry(`诗词：《${res.data}》`)
     })
-  }, [])
+  }
 
   return (
-    <View className={styles.holiday}>
+    <View className={styles.holiday} onClick={onRefresh}>
       {calendar.date && <View className={styles.word}>
         <View>今天是{calendar.today}，{calendar.day}。</View>
         农历{calendar.month}{calendar.date}，{calendar.year}年{calendar.lunar_month}月{calendar.lunar_day}日。
