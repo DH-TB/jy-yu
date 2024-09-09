@@ -52,9 +52,6 @@ const Call = (props: { activeTabIndex: number }) => {
     if (data.detail.value.toLocaleUpperCase() === '7EVN1LVEN' || data.detail.value.toLocaleUpperCase() === 'JY煜') {
       setShowInput(true)
     }
-    if (data.detail.value === '大叔不要跑') {
-      playAudio('https://music.163.com/song/media/outer/url?id=2624549413');
-    }
   }
 
   const handleInnerClick = (e) => {

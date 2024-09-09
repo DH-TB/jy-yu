@@ -90,7 +90,7 @@ function Person() {
             <View className={styles.song}>
               <View className={styles.songText}>{text}</View>
               <View className={styles.songNameWrap}>
-                <View className={styles.songName}>{name}</View>
+                <View className={styles.songName}>{`7EVN1lVEN/${name}`}</View>
                 <Text className={styles.original}>原创</Text>
               </View>
             </View>
