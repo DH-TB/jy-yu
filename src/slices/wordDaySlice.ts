@@ -1,6 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { DAY_TEXTS, DAY_IMAGES } from '../constants/recommend';
-import { getIndex } from '../utils/util';
+import { DAY_TEXTS, DAY_IMAGES, TEXT3, IMAGE3 } from '../constants/recommend';
+import { generateUniqueRandomNumbers, getIndex } from '../utils/util';
+
+const specialInitState =  generateUniqueRandomNumbers(0, TEXT3.length - 1, 7).map((item, i) => ({
+    image: IMAGE3[i],
+    hitokoto: TEXT3[item as unknown as number],
+    from: '',
+    from_who: ''
+}))
 
 const initialState = Array.from({ length: 7 }, (_, i) => ({
     image: DAY_IMAGES[getIndex()][i],
@@ -11,7 +18,7 @@ const initialState = Array.from({ length: 7 }, (_, i) => ({
 
 export const wordDaySlice = createSlice({
     name: 'wordDay',
-    initialState: { data: initialState, success: false },
+    initialState: { data: getIndex() === 13 ? specialInitState : initialState },
     reducers: {
         saveWordDay: (state, action) => {
             state.data = getIndex() === 13 ? state.data : state.data.map((item, index) => ({
@@ -20,7 +27,6 @@ export const wordDaySlice = createSlice({
                 from: action.payload[index].from,
                 from_who: action.payload[index].from_who,
             }));
-            state.success = true;
         },
     },
 });

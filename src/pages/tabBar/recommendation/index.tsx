@@ -19,6 +19,8 @@ const lightBackground = 'rgba($color: #fff7f3, $alpha: 0.3)'
 const arrays = [lightBackground, background, bottomBackground, ellipseBackground]
 
 function Recommendation() {
+  const [activeTabIndex, setActiveTabIndex] = useState(0)
+
   useShareAppMessage(() => {
     return {
       title: '煜Yu',
@@ -27,7 +29,6 @@ function Recommendation() {
     };
   });
   
-  const [activeTabIndex, setActiveTabIndex] = useState(0)
   const renderContent = () => {
     if (activeTabIndex === 0) {
       return <WordDay />

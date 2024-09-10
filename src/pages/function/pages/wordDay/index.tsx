@@ -5,37 +5,40 @@ import cx from 'classnames'
 import { defaultBackground } from '../../../../constants/color';
 import { useSelector, useDispatch } from 'react-redux';
 import { saveWordDay } from '../../../../slices/wordDaySlice';
-import Taro from '@tarojs/taro';
+import Taro, { useDidShow } from '@tarojs/taro';
 import { WORD_DAY_TYPE } from '../../../../constants/recommend';
 import { generateUniqueRandomNumbers, isNight } from '../../../../utils/util';
 
 function WordDay() {
   const wordDay = useSelector((state) => state.wordDay);
-  const { data, success } = wordDay
-
+  const { data } = wordDay
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (!success && !isNight()) {
-      const arrays = generateUniqueRandomNumbers(0, WORD_DAY_TYPE.length -1, 7).map((item) => refresh(WORD_DAY_TYPE[item as number]))
-      Promise.all(
-        arrays.map(promise =>
-          promise.then(response => {
-            if (response.statusCode === 403) {
-              throw new Error('403 Forbidden: Access is denied');
-            }
-            return response.data;
-          })
-        )
-      )
-        .then(data => {
-          dispatch(saveWordDay(data))
-        })
-        .catch((err) => {
-          console.error('获取失败:', err)
-        })
+  useDidShow(() => {
+    if (!isNight()) {
+      fetch()
     }
-  }, [])
+  })
+
+  const fetch = () => {
+    const arrays = generateUniqueRandomNumbers(0, WORD_DAY_TYPE.length - 1, 7).map((item) => refresh(WORD_DAY_TYPE[item as number]))
+    Promise.all(
+      arrays.map(promise =>
+        promise.then(response => {
+          if (response.statusCode === 403) {
+            throw new Error('403 Forbidden: Access is denied');
+          }
+          return response.data;
+        })
+      )
+    )
+      .then(data => {
+        dispatch(saveWordDay(data))
+      })
+      .catch((err) => {
+        console.error('获取失败:', err)
+      })
+  }
 
   const refresh = (item) => {
     return Taro.request({
