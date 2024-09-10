@@ -1,21 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import { View, Text, Image, SwiperItem, Swiper } from '@tarojs/components'
 import styles from "./index.module.scss";
 import cx from 'classnames'
 import { defaultBackground } from '../../../../constants/color';
-import { useSelector, useDispatch } from 'react-redux';
-import { saveWordDay } from '../../../../slices/wordDaySlice';
 import Taro, { useDidShow } from '@tarojs/taro';
-import { WORD_DAY_TYPE } from '../../../../constants/recommend';
-import { generateUniqueRandomNumbers, isNight } from '../../../../utils/util';
+import { WORD_DAY_TYPE, DAY_TEXTS, DAY_IMAGES, TEXT3, IMAGE3 } from '../../../../constants/recommend';
+import { generateUniqueRandomNumbers, getIndex, isNight } from '../../../../utils/util';
+
+const getSpecialInitState = () => generateUniqueRandomNumbers(0, TEXT3.length - 1, IMAGE3.length).map((item, i) => ({
+  image: IMAGE3[i],
+  hitokoto: TEXT3[item as unknown as number],
+  from: '',
+  from_who: ''
+}))
+
+const initialState = Array.from({ length: 7 }, (_, i) => ({
+  image: DAY_IMAGES[getIndex()][i],
+  hitokoto: DAY_TEXTS[getIndex()][i],
+  from: '',
+  from_who: ''
+}))
 
 function WordDay() {
-  const wordDay = useSelector((state) => state.wordDay);
-  const { data } = wordDay
-  const dispatch = useDispatch();
+  const [data, setData] = useState(getIndex() === 13 ? getSpecialInitState() : initialState)
 
   useDidShow(() => {
-    if (!isNight()) {
+    if (getIndex() === 13) {
+      setData(getSpecialInitState())
+    } else if (isNight()) {
+      return
+    } else {
       fetch()
     }
   })
@@ -33,7 +47,12 @@ function WordDay() {
       )
     )
       .then(data => {
-        dispatch(saveWordDay(data))
+        setData(data.map((item) => ({
+          ...item,
+          hitokoto: item.hitokoto,
+          from: item.from,
+          from_who: item.from_who,
+        })))
       })
       .catch((err) => {
         console.error('获取失败:', err)
@@ -68,4 +87,5 @@ function WordDay() {
 }
 
 export default WordDay
+
 
