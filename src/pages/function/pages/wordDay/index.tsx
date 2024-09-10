@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { saveWordDay } from '../../../../slices/wordDaySlice';
 import Taro from '@tarojs/taro';
 import { WORD_DAY_TYPE } from '../../../../constants/recommend';
-import { generateUniqueRandomNumbers } from '../../../../utils/util';
+import { generateUniqueRandomNumbers, isNight } from '../../../../utils/util';
 
 function WordDay() {
   const wordDay = useSelector((state) => state.wordDay);
@@ -16,7 +16,7 @@ function WordDay() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!success) {
+    if (!success && !isNight()) {
       const arrays = generateUniqueRandomNumbers(0, WORD_DAY_TYPE.length -1, 7).map((item) => refresh(WORD_DAY_TYPE[item as number]))
       Promise.all(
         arrays.map(promise =>

@@ -8,7 +8,20 @@ import { generateUniqueRandomNumbers } from '../../../../utils/util'
 import name from '../../../../image/name.png'
 import useAudioPlayer from '../../../../hook/audio'
 
-const RADIO = ['2623267833', '2623263920', '2623265844', '2623273307', '2623272380']
+const RADIO = [
+  '2623267833', 
+  '2623263920', 
+  '2623265844', 
+  '2623273307', 
+  '2623272380', 
+  '2625940326',
+  '2625931534',
+  '2625936374',
+  '2625928591',
+  '2625932494',
+  '2625931525',
+  '2625932493'
+]
 
 const generate = () => generateUniqueRandomNumbers(0, LYRIC.length - 1, 9)
 
@@ -24,7 +37,7 @@ const getStyle = () => {
 function Lyric() {
   const [count, setCount] = useState(0)
   const [data, setData] = useState(generate())
-  const showHeart = useMemo(() => count === 72, [count])
+  const showHeart = useMemo(() => count === 27, [count])
   const handleAudioEnd = () => {
     setCount(0);
   };

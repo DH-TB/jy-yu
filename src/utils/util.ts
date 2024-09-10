@@ -75,3 +75,8 @@ export const getIndex = () => {
   }
   return currentIndex;
 }
+
+export const isNight = () => {
+  const currentHour = new Date().getHours(); 
+  return currentHour >= 0 && currentHour < 8;  
+}
