@@ -1,0 +1,19 @@
+.summary {
+  padding: 0 32px;
+
+  .swiper {
+    height: 520px;
+    text-align: center;
+  }
+
+  .image {
+    height: 100%;
+    border-radius: 8px;
+  }
+}
+
+:global {
+  .at-accordion__arrow {
+    color: #d37885;
+  }
+}

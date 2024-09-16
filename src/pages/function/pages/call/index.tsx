@@ -7,6 +7,7 @@ import { defaultDarkBackground, randomColor, randomCoverColor } from '../../../.
 import { CALLS, CALLS_COMMON, CALLS_OTHER, SPECIAL_WORDS, WORDS } from '../../../../constants/call';
 import { generateUniqueRandomNumbers, handleLongPressSaveImage } from '../../../../utils/util';
 import image from '../../../../image/day.png';
+import useAudioPlayer from '../../../../hook/audio';
 
 const generate = () => {
   const index = generateUniqueRandomNumbers(0, WORDS.length + SPECIAL_WORDS.length, 1)[0] as number
@@ -27,6 +28,7 @@ const Call = (props: { activeTabIndex: number }) => {
   const callOthers = useMemo(() => searchText === '' ? CALLS_OTHER :
     CALLS_OTHER.filter((item) => item.song.toLocaleUpperCase().includes(searchText.toLocaleUpperCase())
     ), [searchText]);
+  const { playAudio } = useAudioPlayer();
 
   useEffect(() => {
     onReset()
@@ -49,6 +51,9 @@ const Call = (props: { activeTabIndex: number }) => {
     }
     if (data.detail.value.toLocaleUpperCase() === '7EVN1LVEN' || data.detail.value.toLocaleUpperCase() === 'JY煜') {
       setShowInput(true)
+    }
+    if (data.detail.value === '爱你') {
+      playAudio('https://music.163.com/song/media/outer/url?id=2627779029');
     }
   }
 

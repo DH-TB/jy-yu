@@ -123,6 +123,7 @@ const IMAGE11 = [
 
 export const DAY_IMAGES = [
   IMAGE5,
+  IMAGE4,
   IMAGE6,
   IMAGE7,
   IMAGE8,
@@ -136,7 +137,6 @@ export const DAY_IMAGES = [
   IMAGE1,
   IMAGE2,
   IMAGE3,
-  IMAGE4,
 ]
 
 const TEXT1 = [
@@ -258,6 +258,7 @@ const TEXT11 = [
 
 export const DAY_TEXTS = [
   TEXT5,
+  TEXT4,
   TEXT6,
   TEXT7,
   TEXT8,
@@ -271,7 +272,6 @@ export const DAY_TEXTS = [
   TEXT1,
   TEXT2,
   TEXT3,
-  TEXT4,
 ]
 
 export const WORD_DAY_TYPE = [

@@ -4,15 +4,8 @@ import styles from "./index.module.scss";
 import cx from 'classnames'
 import { defaultBackground } from '../../../../constants/color';
 import Taro, { useDidShow } from '@tarojs/taro';
-import { WORD_DAY_TYPE, DAY_TEXTS, DAY_IMAGES, TEXT3, IMAGE3 } from '../../../../constants/recommend';
+import { WORD_DAY_TYPE, DAY_TEXTS, DAY_IMAGES } from '../../../../constants/recommend';
 import { generateUniqueRandomNumbers, getIndex, isNight } from '../../../../utils/util';
-
-const getSpecialInitState = () => generateUniqueRandomNumbers(0, TEXT3.length - 1, IMAGE3.length).map((item, i) => ({
-  image: IMAGE3[i],
-  hitokoto: TEXT3[item as unknown as number],
-  from: '',
-  from_who: ''
-}))
 
 const initialState = Array.from({ length: 7 }, (_, i) => ({
   image: DAY_IMAGES[getIndex()][i],
@@ -22,12 +15,10 @@ const initialState = Array.from({ length: 7 }, (_, i) => ({
 }))
 
 function WordDay() {
-  const [data, setData] = useState(getIndex() === 13 ? getSpecialInitState() : initialState)
+  const [data, setData] = useState(initialState)
 
   useDidShow(() => {
-    if (getIndex() === 13) {
-      setData(getSpecialInitState())
-    } else if (isNight()) {
+    if (isNight()) {
       return
     } else {
       fetch()
@@ -47,8 +38,8 @@ function WordDay() {
       )
     )
       .then(data => {
-        setData(data.map((item) => ({
-          ...item,
+        setData(data.map((item, index) => ({
+          image: data[index].image,
           hitokoto: item.hitokoto,
           from: item.from,
           from_who: item.from_who,
