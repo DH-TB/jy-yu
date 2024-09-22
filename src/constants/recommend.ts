@@ -1,4 +1,4 @@
-// 好看
+// 1 粉色系
 const IMAGE1 = [
   'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kd2rhuyj30rc0rbdpi.jpg',
   'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kd1vf59j30rb0r3n37.jpg',
@@ -9,7 +9,7 @@ const IMAGE1 = [
   'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kcx8dd1j30r90retgs.jpg',
 ]
 
-// 好看
+// 2 日落
 const IMAGE2 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rly3i47j30u0114tj9.jpg',
   'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rlxjrvgj30zk17snl2.jpg',
@@ -34,7 +34,7 @@ export const IMAGE3 = [
   // 'https://wx3.sinaimg.cn/large/008BXgJxly1htefd8uewgj30u01100ti.jpg',
 ]
 
-// 今天看云 好看
+// 4 今天看云 好看
 const IMAGE4 = [
   'https://wx1.sinaimg.cn/large/008BXgJxly1htdt3im7g8j31401gmae8.jpg',
   'https://wx2.sinaimg.cn/large/008BXgJxly1htdt3ix6plj31401fedj7.jpg',
@@ -45,7 +45,7 @@ const IMAGE4 = [
   'https://wx3.sinaimg.cn/large/008BXgJxly1htdt3k85bej31401k0n23.jpg',
 ]
 
-// 情侣  好看
+// 7 情侣好看
 const IMAGE5 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1hte05odq5hj30oz0uqdl7.jpg',
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte05o1018j30x718g7be.jpg',
@@ -56,8 +56,16 @@ const IMAGE5 = [
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte05np5uaj30tx0vhti9.jpg',
 ]
 
-// 日落风景  好看
+// 8 日落风景  好看
 const IMAGE6 = [
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ky3udj30qj0wt0xn.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ko679j30f00cy409.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24k8wmvj30u01630wy.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1hte24l8vrxj30u0102n21.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ljznej30ps0y844m.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1hte24mbfqhj30u0132gtr.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1hte24lx72kj30u0140duv.jpg',
+
   'https://wx3.sinaimg.cn/large/008BXgJxly1hte0tkvqqyj30ps0vp7dh.jpg',
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte0tlb3e7j30ps0vpgs0.jpg',
   'https://wx3.sinaimg.cn/large/008BXgJxly1hte0tlq0pij30ps0vtn5s.jpg',
@@ -67,7 +75,7 @@ const IMAGE6 = [
   'https://wx1.sinaimg.cn/large/008BXgJxly1hte0tnf1avj3102181dvu.jpg',
 ]
 
-// 粉蓝海  好看
+// 9 粉蓝海  好看
 const IMAGE7 = [
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte1y1av0lj30u0115afa.jpg',
   'https://wx3.sinaimg.cn/large/008BXgJxly1hte1y1mw6jj30u0116gqb.jpg',
@@ -78,7 +86,7 @@ const IMAGE7 = [
   'https://wx1.sinaimg.cn/large/008BXgJxly1hte1y3awvfj30u813zade.jpg',
 ]
 
-// 模糊  好看
+// 10 模糊  好看
 const IMAGE8 = [
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ky3udj30qj0wt0xn.jpg',
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ko679j30f00cy409.jpg',
@@ -89,7 +97,7 @@ const IMAGE8 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1hte24lx72kj30u0140duv.jpg',
 ]
 
-// 烟花
+// 3 烟花
 const IMAGE9 = [
   'https://wx3.sinaimg.cn/large/008BXgJxly1hte0giy046j30xr1ksww0.jpg',
   'https://wx3.sinaimg.cn/large/008BXgJxly1hte0gjdq4uj30xr1ks4hm.jpg',
@@ -100,7 +108,7 @@ const IMAGE9 = [
   'https://wx2.sinaimg.cn/large/008BXgJxly1hte0glh8woj30xq1krh3k.jpg'
 ]
 
-// 三图
+// 6 三图
 const IMAGE10 = [
   'https://wx2.sinaimg.cn/large/008BXgJxly1htdt93f6o1j30u0113ac8.jpg',
   'https://wx3.sinaimg.cn/large/008BXgJxly1htdt93pig6j30u0111q67.jpg',
@@ -111,14 +119,59 @@ const IMAGE10 = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1htdt94yulnj30u011977i.jpg',
 ]
 
+// 11 小猫和粉海
 const IMAGE11 = [
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte31dlewcj30u011744w.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htjoqgk0elj30u0114wik.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htjoqi5d7xj31401dmah3.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htjoqemnyhj31401dj0ze.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htjoqjdg14j313w1dgdmu.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htjoqvk8qrj31401di12o.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htjor22gr6j31401dh7dj.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htjor7g4cpj31401dhain.jpg',
+]
+
+// 12 蓝海
+const IMAGE12 = [
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhxkfbjcj30u00u043o.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhxiqar0j30u00u0jwj.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhxj8e1lj30tf113qb2.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhxjkyc3j30u00yljun.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhxjw8fuj313z1a6107.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhxkrfcoj30s40yt41t.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhxl22jjj30u0117wkc.jpg',
+]
+
+// 13 漫画
+const IMAGE13 = [
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhpwl52cj30tz12ggtp.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhpwvtbfj30tz12jwia.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhpx8kspj30u012hgpj.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhpxiyosj30u012kgns.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhpxsfe9j30u012lmzc.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhpw805lj30u012hn01.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhpy14izj30u012emzm.jpg',
+]
+
+// 14 宫崎骏风格
+const IMAGE14 = [
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhcltpk5j30u018saoa.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhcmcogjj31401swnhv.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhcmssmjj30tz1b2h0b.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhcn8lvbj31401sgtwz.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhcntyirj31401p7twx.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhcoaqb8j313z1tznkt.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhclbe2fj31401srtwr.jpg',
+]
+
+// 15 光落在绿意里
+const IMAGE15 = [
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhjjfdk7j31jk223kjl.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhjn9xe7j31jk223qv5.jpg',
+  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhjjxcl8j31jk223b29.jpg',
+  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhjl0scmj31jk222u0x.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhjllm71j31jk223hdt.jpg',
+  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhjm4409j31jk223u0x.jpg',
+  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhjivcklj30j60sr0y0.jpg',
 ]
 
 export const DAY_IMAGES = [
@@ -130,10 +183,10 @@ export const DAY_IMAGES = [
   IMAGE9,
   IMAGE10,
   IMAGE11,
-  IMAGE11,
-  IMAGE11,
-  IMAGE11,
-  IMAGE11,
+  IMAGE12,
+  IMAGE13,
+  IMAGE14,
+  IMAGE15,
   IMAGE1,
   IMAGE2,
   IMAGE3,
@@ -186,6 +239,7 @@ const TEXT4 = [
   '山鸟与鱼不同路',
   '苹果不去想橘子的问题',
 ]
+
 const TEXT5 = [
   '你我山前没相见 山后别相逢',
   '你不必哽咽 再好也是从前',
@@ -237,23 +291,87 @@ const TEXT9 = [
 ]
 
 const TEXT10 = [
+  '我要去宇宙了，回来摘星星给你。',
+  '眼睛写了日记 选几页分享',
+  '百事都可樂',
+  '人们总是揣着答案问问题',
+  '首先你要开心 其次都是其次',
+  '在意我的话 就在意我的话 ',
+  '风生水起靠自己',
+]
+
+//《龙猫》 台词
+const TEXT11 = [
+  '不要着急，最好的总在不经意之间出现',
+  '有些烦恼，丢掉了，才有云淡风轻的机会',
   '有些人光是遇到就已经赚到了',
   '不被理解的感觉真叫人落寞',
   '为者常成 行者常至',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
+  '我们一起大笑看看，可怕的东西就会跑光光了。',
+  '也许他不是沉默的海，他只是不会为我澎湃',
 ]
 
-const TEXT11 = [
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
-  '他们都笑你 偏偏你最好笑',
+const TEXT12 = [
+  '只是一不小心答应了',
+  '替沉睡的麦子',
+  '守一夜的月亮',
+  '从此夜夜赴荒原',
+  '夜夜盼无云',
+  '无人知我心中龉龊',
+  '误我爱星辰',
+]
+
+const TEXT13 = [
+  '不要预设和别人共度一生',
+  '就自然的相处',
+  '命运把你们带到哪里到哪里',
+  '天有道',
+  '自不会让有情人分离',
+  '天若无道',
+  '人就应该遵循天命',
+]
+
+const TEXT14 = [
+  '我没有不甘心',
+  '只是这个结局',
+  '配不上',
+  '我当初明知不可为而为之的心',
+  '我拿出了我最大的诚意',
+  '所以该還憾的人',
+  '不是我',
+]
+
+const TEXT15 = [
+  '不必祝她开花',
+  '不必教会她爱',
+  '她不必勇敢 不必慷慨 不必乖',
+  '祝她鼎沸好了 祝她有留白',
+  '祝她把世俗的目光 一裁再裁',
+  '祝她在人生海海',
+  '尽兴 开怀',
+]
+
+const TEXT16 = [
+  // ——《你想活出怎样的人生》
+  '无论时代如何残酷，要活的像一个真正的人。',
+  '遇到困难时，要记得抬头看看天空。',
+  // ——《哈尔的移动城堡》
+  '像旧巷子里猫，我很自由，但没有归宿。',
+  '人老了唯一的好处就是，能失去的东西少了。',
+  // 《千与千寻》
+  '走吧，不要回头。',
+  '我只能送你到这里了,剩下的路你要自己走,不要回头。',
+  '我的金子,只给千寻—《千与千寻》',
+  '曾经发生过的事情不会忘记，只是暂时想不起来而已。——《千与千寻》',
+  '不管前方的路有多辛苦，只要走的方向正确，不管多么崎岖不平，都比站在原地更接近幸福。——《千与千寻》',
+  '“人生就是一列开往坟墓的列车，路途上会有很多站，很难有人可以自始至终陪着走完。当陪你的人要下车时，即使不舍也该心存感激，然后挥手道别。”——《千与千寻》',
+  '人永远不知道，谁哪次不经意的跟你说了再见之后，就真的不会再见了《千与千寻》',
+
+  '我不知道我有多喜欢你，但如果去见你，我一定是用跑的。在奔向你的路上这一路，风都是甜的。——《悬崖上的金鱼姬》',
+  '我始终相信，在这个世界上一定有另一个自己在做着我不敢做的事，在过着我想过的生活 -《猫的报恩》',
+  '我说不出来为什么爱你，但我知道，你就是我不爱别人的理由。”——《虞美人盛开的山坡》',
+  '如果把童年再放映一遍，我们一定会先大笑，然后放声大哭，最后挂着泪，微笑着睡去。《龙猫》',
+  '生活坏到一定程度就会好起来，因为它无法更坏。努力过后才知道许多事情，坚持坚持就过来了。《龙猫》',
 ]
 
 export const DAY_TEXTS = [
@@ -265,10 +383,10 @@ export const DAY_TEXTS = [
   TEXT9,
   TEXT10,
   TEXT11,
-  TEXT11,
-  TEXT11,
-  TEXT11,
-  TEXT11,
+  TEXT12,
+  TEXT13,
+  TEXT14,
+  TEXT15,
   TEXT1,
   TEXT2,
   TEXT3,

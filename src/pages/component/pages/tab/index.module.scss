@@ -1,6 +1,11 @@
-.tab {
+.tabWrap {
   padding: 32px 16px;
   height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
   display: flex;
   
   .tabTitle {

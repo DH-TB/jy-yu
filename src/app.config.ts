@@ -3,7 +3,8 @@ export default defineAppConfig({
   pages: [
     "pages/tabBar/home/index",
     'pages/tabBar/recommendation/index',
-    'pages/tabBar/board/index'
+    'pages/tabBar/board/index',
+    'pages/tabBar/activity/index',
   ],
   subPackages: [
     {
@@ -42,6 +43,12 @@ export default defineAppConfig({
         text: '一些',
         iconPath: "image/q3.jpeg",
         selectedIconPath: "image/q4.jpeg",
+      },
+      {
+        pagePath: 'pages/tabBar/activity/index',
+        text: '活动',
+        iconPath: "image/q7.jpeg",
+        selectedIconPath: "image/q8.jpeg",
       },
       {
         pagePath: 'pages/tabBar/board/index',

@@ -37,8 +37,8 @@ function WordDay() {
         })
       )
     )
-      .then(data => {
-        setData(data.map((item, index) => ({
+      .then(res => {
+        setData(res.map((item, index) => ({
           image: data[index].image,
           hitokoto: item.hitokoto,
           from: item.from,

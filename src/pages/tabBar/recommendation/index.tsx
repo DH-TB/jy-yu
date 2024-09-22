@@ -7,11 +7,10 @@ import Lyric from "../../function/pages/lyric";
 import Holiday from "../../function/pages/holiday";
 import Bar from "../../component/pages/bar";
 import Tab from '../../component/pages/tab';
-import Summary from '../../function/pages/summary';
 import { useShareAppMessage } from '@tarojs/taro';
 
 const tabs = [
-  '日推', '歌词', '抽象', '活动', '随机'
+  '日推', '歌词', '抽象', '随机'
 ]
 const background = 'radial-gradient(circle, rgba(211, 120, 133, 0.6) 30%, #e9d7d4 70%)'
 const ellipseBackground = 'radial-gradient(ellipse, rgba(211, 120, 133, 0.6) 24%, #e9d7d4 70%)'
@@ -39,9 +38,6 @@ function Recommendation() {
     }
     else if (activeTabIndex === 2) {
       return <Holiday />
-    }
-    else if (activeTabIndex === 3) {
-      return <Summary />
     }
     return <Random />
   }

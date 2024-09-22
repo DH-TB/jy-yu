@@ -1,0 +1,12 @@
+.recommendation {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .operationIcon {
+    font-size: 48px;
+    color: #d37885;
+    margin-top: 12px;
+  }
+}
