@@ -127,7 +127,7 @@
     .person {
       width: calc(100vw - 96px);
       height: 360px;
-      box-shadow: 8px 8px 16px #d1d1d1,
+      box-shadow: 8px 8px 16px #fff,
         -8px -8px 16px #ffffff;
       border-radius: 12px;
       position: absolute;
@@ -137,6 +137,7 @@
       /*当元素为反面的时候设置为不可见*/
       transition: 1s;
       transform-style: preserve-3d;
+      background: radial-gradient(circle, rgba(211, 120, 133, 0.6) 28%, rgba(#e9d7d4, 0.2) 70%) !important;
     }
 
     .person1 {

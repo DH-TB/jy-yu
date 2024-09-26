@@ -3,6 +3,7 @@ import Taro from '@tarojs/taro'
 import { View, Image, Text, Button } from '@tarojs/components'
 import styles from './index.module.scss'
 import heart from '../../../../image/heart.jpg'
+import happy from '../../../../image/happy.png'
 import textImage from '../../../../image/text.png'
 import cx from 'classnames'
 import Bar from "../../../component/pages/bar";
@@ -131,7 +132,8 @@ function Person() {
             style={{ background: defaultBackground }}
           />
           <Image
-            src={"https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg"}
+            // src={"https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg"}
+            src={happy}
             className={cx(styles.person, styles.person2)}
             style={{ background: defaultBackground }}
           />
