@@ -3,7 +3,7 @@ import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import cx from 'classnames'
 import styles from './index.module.scss'
-import { LYRIC, SPECIAL_LYRIC } from '../../../../constants/call'
+import { LYRIC, NEW_SONG_LYRIC, SPECIAL_LYRIC } from '../../../../constants/call'
 import { generateUniqueRandomNumbers } from '../../../../utils/util'
 import name from '../../../../image/name.png'
 import useAudioPlayer from '../../../../hook/audio'
@@ -36,7 +36,7 @@ const getStyle = () => {
 
 function Lyric() {
   const [count, setCount] = useState(0)
-  const [data, setData] = useState(generate())
+  const [data, setData] = useState<any>(NEW_SONG_LYRIC)
   const showHeart = useMemo(() => count === 27, [count])
   const handleAudioEnd = () => {
     setCount(0);
@@ -49,8 +49,8 @@ function Lyric() {
   };
 
   const refresh = () => {
-    setCount(count + 1)
-    setData(generate())
+    setCount(count + 1)    
+    setData(generate().map(item => LYRIC[item as number]))
   }
 
   useEffect(() => {
@@ -76,8 +76,8 @@ function Lyric() {
       }
       <View className={styles.lyric} onClick={refresh}>
         {data.map((item) =>
-          <View className={cx(styles.text, SPECIAL_LYRIC.includes(LYRIC[item as number]) && styles.border)} style={{ ...getStyle() }}>
-            {LYRIC[item as number]}
+          <View className={cx(styles.text, SPECIAL_LYRIC.includes(item) && styles.border)} style={{ ...getStyle() }}>
+            {item}
           </View>)}
       </View>
     </>

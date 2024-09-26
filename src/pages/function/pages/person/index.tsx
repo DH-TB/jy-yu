@@ -11,7 +11,16 @@ import { HOME_SONG_INFO, LINKS } from '../../../../constants/home'
 import { generateUniqueRandomNumbers, getIndex } from '../../../../utils/util'
 
 // const generate = () => HOME_SONG_INFO[generateUniqueRandomNumbers(0, HOME_SONG_INFO.length - 1, 1) as unknown as number]
-const generate = () => HOME_SONG_INFO[getIndex()]
+// const generate = () => HOME_SONG_INFO[getIndex()]
+const SONG = {
+  text: '老人与海 美女与野兽 盛放的火焰我自己来庇护',
+  name: '黄昏日落时',
+  currentDuration: '00:52',
+  totalDuration: '03:04',
+  shortLink: '#小程序://网易云音乐听歌/4lDp7JzNjEWPWKw'
+}
+const generate = () => SONG
+
 function Person() {
   const { name, text, currentDuration, totalDuration, shortLink } = generate()
   const [showFront, setShowFront] = useState(true)
