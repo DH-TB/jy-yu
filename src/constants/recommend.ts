@@ -1,4 +1,4 @@
-// 1 粉色系
+// 粉色系
 const IMAGE1 = [
   'https://wx4.sinaimg.cn/large/005SF7JFly1ht3kd2rhuyj30rc0rbdpi.jpg',
   'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kd1vf59j30rb0r3n37.jpg',
@@ -9,166 +9,165 @@ const IMAGE1 = [
   'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kcx8dd1j30r90retgs.jpg',
 ]
 
-// 2 日落
+// 日落
 const IMAGE2 = [
-  'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rly3i47j30u0114tj9.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rlxjrvgj30zk17snl2.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1ht8rlyu866j30zk17t7q3.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1ht8rlzhblcj30zk17yasw.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rm0egolj30zj17vqip.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1ht8rm1hza4j30zj17vnoi.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1ht8rm294f5j30zj17we4o.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1ht8rm2x0zfj30zk17zx24.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu261zjp15j30u0114qdb.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu261zxwgbj30zk17s4ly.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu2620j2hmj30zk17t4kt.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu2620wt8fj30zk17y7li.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu2621c5p7j30zj17v1ii.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu2621s0mfj30zj17wx24.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu262269uzj30zk17znkt.jpg',
 ]
 
 // 小丑🤡
-export const IMAGE3 = [
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htefd76hcvj30qx0xan52.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htefd7ixzkj30u00yw7dd.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htefd7ssavj30qx0zs42j.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htefd81vmvj30mz0qadll.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htefd8au14j30u0114ju0.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htefd6ucakj30hr0ncwiz.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htefd9da41j30uq18bafs.jpg',
-  // 'https://wx2.sinaimg.cn/large/008BXgJxly1htefd8lcayj30mr0q8dj3.jpg',
-  // 'https://wx3.sinaimg.cn/large/008BXgJxly1htefd8uewgj30u01100ti.jpg',
+const IMAGE3 = [
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu267tgnccj30u00ywdom.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu267nf49yj30mz0qa794.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu267u9x01j30qx0zsadm.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu267ulnn9j30u0114wh9.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu267uvh5rj30mr0q8774.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu267vvg0oj30hr0ncq7f.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu267w8p39j30uq18bte3.jpg',
 ]
 
-// 4 今天看云 好看
+// 今天看云
 const IMAGE4 = [
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htdt3im7g8j31401gmae8.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htdt3ix6plj31401fedj7.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htdt3hnuy3j31401k4jw2.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htdt3j616hj31401k8q8b.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htdt3jmzy8j31401lun4d.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htdt3jxbedj31401k4jx8.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htdt3k85bej31401k0n23.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu2622fnxlj31401gm41v.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu2622r106j31401fen0e.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu2622zwjcj31401k4n1e.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu2623e96nj31401k8n1x.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu261x1ffqj31401luq9k.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu261xdzo6j31401k4te8.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu261xoextj31401k0n1l.jpg',
 ]
 
-// 7 情侣好看
+// 情侣
 const IMAGE5 = [
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte05odq5hj30oz0uqdl7.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte05o1018j30x718g7be.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte05ov29ej30u0166wt0.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte05mo455j30qa0tjwim.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte05mzl27j30u00yj457.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte05nd07aj30kg0nkdix.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte05np5uaj30tx0vhti9.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu267nq9cnj30qa0tj42a.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu267o3g70j30u00yjn23.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu267ontvcj30kg0nk41d.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu267pwqzlj30tx0vhgtt.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu267ra404j30x718g451.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu267rpm9tj30oz0uqq7v.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu267sf7htj30u0166tku.jpg',
 ]
 
-// 8 日落风景  好看
+// 日落风景
 const IMAGE6 = [
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0tkvqqyj30ps0vp7dh.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0tlb3e7j30ps0vpgs0.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0tlq0pij30ps0vtn5s.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0tmektuj30ps0vp44w.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0tka6buj30u0140dn1.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0tmxjvhj30u00ykgvy.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte0tnf1avj3102181dvu.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263qvur7j30ps0vpgu4.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu263rv3dij30ps0vptel.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263sf9caj30ps0vt463.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu263t17laj30ps0vp7ah.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu263tyniej30u014016e.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263vf9bwj30u00ykn7s.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu263vth2vj3102181wsw.jpg',
 ]
 
-// 9 粉蓝海  好看
+// 粉蓝海 
 const IMAGE7 = [
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte1y1av0lj30u0115afa.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte1y1mw6jj30u0116gqb.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte1y1yw4jj30u010w0w9.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte1y2a9mbj30u010sjx5.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte1y2moawj30u010r43e.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte1y2xxb5j30u0113tea.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1hte1y3awvfj30u813zade.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu265l8nwmj30u01150xd.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu265low4vj30u0116td2.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu265m235ej30u010w77j.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu265mrxdmj30u010sjwd.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu265n6wtfj30u010rq7k.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu265nh35yj30u0113td4.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu265nwn45j30u813zdia.jpg',
 ]
 
-// 10 模糊  好看
+// 模糊
 const IMAGE8 = [
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ky3udj30qj0wt0xn.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ko679j30f00cy409.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24k8wmvj30u01630wy.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte24l8vrxj30u0102n21.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte24ljznej30ps0y844m.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte24mbfqhj30u0132gtr.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte24lx72kj30u0140duv.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu263m7z5mj30f00cywg8.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263mzwbuj30qj0wt78n.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu263o8r5kj30u0163ae5.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263oiyvyj30u0102td9.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263oxyn5j30ps0y8n34.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu263ll432j30u014017k.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu263pih3nj30u0132wmi.jpg',
+  // 'https://wx4.sinaimg.cn/large/008BWXQOly1hu263pxz0mj30tz0r477x.jpg',
 ]
 
-// 3 烟花
+// 烟花
 const IMAGE9 = [
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0giy046j30xr1ksww0.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1hte0gjdq4uj30xr1ks4hm.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0gjrnypj30xr1ksh42.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0gk7hlpj30xq1krdx5.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0gkm9w7j30vu1hgany.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1hte0gifr1gj30xr1ks4f8.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1hte0glh8woj30xq1krh3k.jpg'
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu26c00nqrj30xr1ksql2.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu26c0il76j30xr1ksk96.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26c30at8j30xr1kskae.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu26c3scq5j30xq1krdw9.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu26c4qwe3j30vu1hgdts.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu26c67amnj30xr1ksh39.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26c7cg71j30xq1krar4.jpg'
 ]
 
-// 6 三图
+// 女孩宇宙、蝴蝶
 const IMAGE10 = [
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htdt93f6o1j30u0113ac8.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htdt93pig6j30u0111q67.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htdt932qpsj30u0116jv7.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htdt9418hrj30u01160wd.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htdt94brgfj30u0114jv5.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htdt94pyumj30u0116412.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htdt94yulnj30u011977i.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu267yedwfj30sf0pptfb.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu267xnu4lj30sf0pn7b2.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu267wx1bwj30sf0pnwmm.jpg',  
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu2684xxfcj30sf0ps7a3.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu261xzi6fj30k00op79s.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu261y8lszj30k00ooafn.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu261ykthgj30zk17xdu1.jpg',
+  // 'https://wx3.sinaimg.cn/large/008BWXQOly1hu261z1lpdj30zk17y4f1.jpg',
 ]
 
-// 11 小猫和粉海
+// 小猫和粉海
 const IMAGE11 = [
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htjoqgk0elj30u0114wik.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htjoqi5d7xj31401dmah3.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htjoqemnyhj31401dj0ze.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htjoqjdg14j313w1dgdmu.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htjoqvk8qrj31401di12o.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htjor22gr6j31401dh7dj.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htjor7g4cpj31401dhain.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu265ou3zxj30u01140wt.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu265pgi56j31401dmn3r.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu265kvi6cj31401dj7ak.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu265ps8jpj313w1dg458.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu265qdafzj31401din75.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu265qv9r5j31401dhdoz.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu265rcf5kj31401dhjzz.jpg',
 ]
 
-// 12 蓝海
+// 蓝海
 const IMAGE12 = [
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhxkfbjcj30u00u043o.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhxiqar0j30u00u0jwj.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhxj8e1lj30tf113qb2.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhxjkyc3j30u00yljun.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhxjw8fuj313z1a6107.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhxkrfcoj30s40yt41t.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhxl22jjj30u0117wkc.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu265rrzc9j30u01170yb.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu265s6uv0j30s40yt0w0.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu265sjrp2j313z1a6n4d.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu265odl0mj31401k0n4w.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263w2widj30u00yl0w1.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu263wemjgj30tf113jzd.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu263q9moej30u0113jw1.jpg'
 ]
 
-// 13 漫画
+// 女孩漫画
 const IMAGE13 = [
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhpwl52cj30tz12ggtp.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhpwvtbfj30tz12jwia.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhpx8kspj30u012hgpj.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhpxiyosj30u012kgns.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhpxsfe9j30u012lmzc.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhpw805lj30u012hn01.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhpy14izj30u012emzm.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu26c7zo01j30tz12ggtq.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu26c8bn6kj30tz12j42d.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu26c8tz7oj30u012htcn.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26c9iluaj30u012kwgp.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu26c9xiv1j30u012ldi4.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26ca8zazj30u012hq5u.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu26calsw8j30u012ewh4.jpg',
 ]
 
-// 14 宫崎骏风格
+// 宫崎骏风格 图文不搭配
 const IMAGE14 = [
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhcltpk5j30u018saoa.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhcmcogjj31401swnhv.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhcmssmjj30tz1b2h0b.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhcn8lvbj31401sgtwz.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhcntyirj31401p7twx.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhcoaqb8j313z1tznkt.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhclbe2fj31401srtwr.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu269sewxwj30u018s4cb.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu269qy1ahj31401swnhz.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu269tbxldj30tz1b2h00.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu269tsyafj31401sgtxa.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu269u9awlj31401p7twf.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu269weghbj313z1tzh9y.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu269z23g7j31401srkfv.jpg',
 ]
 
-// 15 光落在绿意里
+// 光落在绿意里
 const IMAGE15 = [
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhjjfdk7j31jk223kjl.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhjn9xe7j31jk223qv5.jpg',
-  'https://wx4.sinaimg.cn/large/008BXgJxly1htwhjjxcl8j31jk223b29.jpg',
-  'https://wx1.sinaimg.cn/large/008BXgJxly1htwhjl0scmj31jk222u0x.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhjllm71j31jk223hdt.jpg',
-  'https://wx3.sinaimg.cn/large/008BXgJxly1htwhjm4409j31jk223u0x.jpg',
-  'https://wx2.sinaimg.cn/large/008BXgJxly1htwhjivcklj30j60sr0y0.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu26a0y7zqj31jk223hdt.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu26a28slhj31jk223b29.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26a4shk1j31jk222qv5.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26a6x3vjj31jk223e81.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26aakp8gj31jk223u0x.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu26adfp0wj31jk223npd.jpg',
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu26ae2btej30j60srjwi.jpg',
 ]
 
 export const DAY_IMAGES = [
-  IMAGE5,
   IMAGE4,
+  IMAGE5,
   IMAGE6,
   IMAGE7,
   IMAGE8,
@@ -212,6 +211,7 @@ const TEXT3 = [
   '我只希望我的死 比活着更有价值',
   '在你介绍我出场的时候，可不可以称我为“小丑”？',
   '当个坏人吧，好人没前途，除了哭，就是细数痛苦',
+
   '人们总想让你得体一点，就好像你不得体一样。',
   '当我小时候告诉别人我想当一个谐星，大家都笑我，现在没人在笑了。',
   '我曾以为，我的人生是场悲剧。但现在我意识到，它原来是场喜剧。',
@@ -265,11 +265,11 @@ const TEXT7 = [
 const TEXT8 = [
   '无解的话就永远模糊不清吧',
   '可是姐姐啊，沿着旧地图是找不到新大陆的。',
+  '今天很好我很喜欢今天',
   '第一次活 手忙脚乱',
   '一点小事就想死',
   '是正常人类的 可爱反应机制',
-  '今天很好我很喜欢今天',
-  '我将违背我的天性 不顺本能',
+  '好烦 这个世界能不能把我删了'
 ]
 
 const TEXT9 = [
@@ -285,10 +285,10 @@ const TEXT9 = [
 const TEXT10 = [
   '我要去宇宙了，回来摘星星给你。',
   '眼睛写了日记 选几页分享',
-  '百事都可樂',
-  '人们总是揣着答案问问题',
-  '首先你要开心 其次都是其次',
-  '在意我的话 就在意我的话 ',
+  '万物都是自由诗',
+  '于是我驻足',
+  '我不要短暂的惊鸿',
+  '在意我的话 就在意我的话',
   '风生水起靠自己',
 ]
 
@@ -296,9 +296,9 @@ const TEXT10 = [
 const TEXT11 = [
   '不要着急，最好的总在不经意之间出现',
   '有些烦恼，丢掉了，才有云淡风轻的机会',
-  '有些人光是遇到就已经赚到了',
-  '不被理解的感觉真叫人落寞',
-  '为者常成 行者常至',
+  '有些人，光是遇到就已经赚到了',
+  '首先你要开心 其次都是其次',
+  '人们总是揣着答案问问题',
   '我们一起大笑看看，可怕的东西就会跑光光了。',
   '也许他不是沉默的海，他只是不会为我澎湃',
 ]
@@ -343,42 +343,82 @@ const TEXT15 = [
   '尽兴 开怀',
 ]
 
-const TEXTS = [
-  // ——《你想活出怎样的人生》
-  '\n\n无论时代如何残酷\n要活的\n像一个真正的人',
-  '\n\n\n遇到困难时\n\n要记得抬头看看天空',
-  // ——《哈尔的移动城堡》
-  '\n\n\n像旧巷子里猫\n我很自由\n但没有归宿',
-  '\n\n人老了唯一的好处\n就是\n能失去的东西少了',
-  // 《千与千寻》
-  '\n\n\n走吧\n不要回头',
-  '\n\n\n我的金子\n只给千寻',
-  '\n我只能送你到这里了\n\n剩下的路\n你要自己走\n不要回头',
-  '\n\n曾经发生过的事情\n不会忘记\n只是暂时\n想不起来而已',
-  '\n不管前方的路\n有多辛苦\n只要走的方向正确\n不管多么崎岖不平\n都比站在原地\n更接近幸福',
-  '人生就是一列\n开往坟墓的列车\n路途上会有很多站\n很难有人可以\n自始至终陪着走完\n当陪你的人要下车时\n即使不舍也该\n心存感激\n然后挥手道别',
-  '\n\n人永远不知道\n谁哪次不经意的跟你\n说了再见之后\n就真的不会再见了',
-  // 《悬崖上的金鱼姬》
-  '\n我不知道我\n有多喜欢你\n但如果去见你\n我一定是用跑的\n在奔向你的路上\n这一路%20风都是甜的',
-  // 《猫的报恩》
-  '\n我始终相信\n在这个世界上\n一定有另一个自己\n在做着我不敢做的事\n在过着我想过的生活 ',
-  //《虞美人盛开的山坡》
-  '\n我说不出来\n为什么爱你\n但我知道\n你就是我\n不爱别人的理由',
-  // 《龙猫》
-  '\n如果把童年\n再放映一遍\n我们一定会先大笑\n然后放声大哭\n最后挂着泪\n微笑着睡去',
-  '\n生活坏到一定程度\n就会好起来\n因为它无法更坏\n努力过后才知道\n许多事情\n坚持坚持就过来了',
-  // 大鱼海棠
-  '我没有不甘心\n只是这个结局配不上\n我当初明知不可为\n而为之的心\n我拿出了\n我最大的诚意\n所以该還憾的人\n不是我',
-  '不要预设和别人\n共度一生\n就自然的相处\n命运把你们带到哪里\n到哪里\n天有道\n自不会让有情人分离\n天若无道\n人就应该遵循天命',
-  //
-  '\n只是一不小心答应了\n替沉睡的麦子\n守一夜的月亮\n从此夜夜赴荒原\n夜夜盼无云\n无人知我心中龉龊\n误我爱星辰',
-  //
-  '不必祝她开花\n不必教会她爱\n她不必勇敢%20不必慷慨%20不必乖\n祝她鼎沸好了\n祝她有留白\n祝她把世俗的目光\n一裁再裁\n祝她在人生海海\n尽兴%20开怀',
+export const CARD_TEXT = [
+  {
+    name: '《你想活出怎样的人生》',
+    text: [
+      '\n\n无论时代如何残酷\n要活的\n像一个真正的人',
+      '\n\n\n遇到困难时\n\n要记得抬头看看天空',
+    ]
+  },
+  {
+    name: '《哈尔的移动城堡》',
+    text: [
+      '\n\n\n像旧巷子里猫\n我很自由\n但没有归宿',
+      '\n\n人老了唯一的好处\n就是\n能失去的东西少了',
+    ]
+  },
+  {
+    name: '《千与千寻》',
+    text: [
+      '\n\n\n走吧\n不要回头',
+      '\n\n\n我的金子\n只给千寻',
+      '\n我只能送你到这里了\n\n剩下的路\n你要自己走\n不要回头',
+      '\n\n曾经发生过的事情\n不会忘记\n只是暂时\n想不起来而已',
+      '\n不管前方的路\n有多辛苦\n只要走的方向正确\n不管多么崎岖不平\n都比站在原地\n更接近幸福',
+      '人生就是一列\n开往坟墓的列车\n路途上会有很多站\n很难有人可以\n自始至终陪着走完\n当陪你的人要下车时\n即使不舍也该\n心存感激\n然后挥手道别',
+      '\n\n人永远不知道\n谁哪次不经意的跟你\n说了再见之后\n就真的不会再见了',
+    ]
+  },
+  {
+    name: '《悬崖上的金鱼姬》',
+    text: [
+      '\n我不知道我\n有多喜欢你\n但如果去见你\n我一定是用跑的\n在奔向你的路上\n这一路%20风都是甜的',
+    ]
+  },
+  {
+    name: '《猫的报恩》',
+    text: [
+      '\n我始终相信\n在这个世界上\n一定有另一个自己\n在做着我不敢做的事\n在过着我想过的生活 ',
+    ]
+  },
+  {
+    name: '《虞美人盛开的山坡》',
+    text: [
+      '\n我说不出来\n为什么爱你\n但我知道\n你就是我\n不爱别人的理由',
+    ]
+  },
+  {
+    name: '《龙猫》',
+    text: [
+      '\n如果把童年\n再放映一遍\n我们一定会先大笑\n然后放声大哭\n最后挂着泪\n微笑着睡去',
+      '\n生活坏到一定程度\n就会好起来\n因为它无法更坏\n努力过后才知道\n许多事情\n坚持坚持就过来了',
+    ]
+  },
+  {
+    name: '《大鱼海棠》',
+    text: [
+      '我没有不甘心\n只是这个结局配不上\n我当初明知不可为\n而为之的心\n我拿出了\n我最大的诚意\n所以该還憾的人\n不是我',
+      '不要预设和别人\n共度一生\n就自然的相处\n命运把你们带到哪里\n到哪里\n天有道\n自不会让有情人分离\n天若无道\n人就应该遵循天命',
+    ]
+  },
+  {
+    name: '',
+    text: [
+      '\n只是一不小心答应了\n替沉睡的麦子\n守一夜的月亮\n从此夜夜赴荒原\n夜夜盼无云\n无人知我心中龉龊\n误我爱星辰',
+      '不必祝她开花\n不必教会她爱\n她不必勇敢%20不必慷慨%20不必乖\n祝她鼎沸好了\n祝她有留白\n祝她把世俗的目光\n一裁再裁\n祝她在人生海海\n尽兴%20开怀',
+    ]
+  },
+  {
+    name: '',
+    text: [
+    ]
+  },
 ]
 
 export const DAY_TEXTS = [
-  TEXT5,
   TEXT4,
+  TEXT5,
   TEXT6,
   TEXT7,
   TEXT8,
