@@ -4,7 +4,6 @@ export const MID_AUTUMN_FESTIVAL = [
   'https://wx4.sinaimg.cn/large/008BXgJxly1htq4yc9p02j30u00u0n02.jpg',
 ]
 
-
 export const CP = [
   {
     type: '煜&小骨',

@@ -8,6 +8,7 @@ import Holiday from "../../function/pages/holiday";
 import Bar from "../../component/pages/bar";
 import Tab from '../../component/pages/tab';
 import { useShareAppMessage } from '@tarojs/taro';
+import { PERSON_IMAGE } from '../../../constants/home';
 
 const tabs = [
   '日推', '歌词', '抽象', '随机'
@@ -25,7 +26,7 @@ function Recommendation() {
     return {
       title: '煜Yu',
       path: '/pages/tabBar/recommendation/index',
-      imageUrl: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'
+      imageUrl: PERSON_IMAGE
     };
   });
 

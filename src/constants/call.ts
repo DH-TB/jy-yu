@@ -172,13 +172,13 @@ export const LYRIC = [
 export const CALLS = [
     {
         song: '《黄昏日落时》',
-        text: ``,
+        text: '日落的黄昏打在脸上🌇煜公主是个artist💫在忘我地演唱💓爱上也是一种点亮🌟',
         image: 'https://wx4.sinaimg.cn/large/005SF7JFly1hu0zbo4tbsj31xg1xgqv6.jpg',
         info: '',
     },
     {
         song: '《生于未来》',
-        text: `钻石💎被切割那面渗透出高级感 💫拉上窗帘也遮盖不住煜皇❤️‍🔥像钻石超级闪✨`,
+        text: '钻石💎被切割那面渗透出高级感 💫拉上窗帘也遮盖不住煜皇❤️‍🔥像钻石超级闪✨',
         image: '',
         info: '',
     },

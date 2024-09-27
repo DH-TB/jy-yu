@@ -6,7 +6,7 @@ import cx from 'classnames';
 
 interface IProps {
   tabs: string[]
-  children: any
+  children?: any
   changeTab: (index: number) => void
 }
 

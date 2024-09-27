@@ -1,5 +1,5 @@
 export default definePageConfig({
-  navigationBarTitleText: '存档',
+  navigationBarTitleText: '应援词',
   enableShareAppMessage: true,
   enableShareTimeline: true,
 })

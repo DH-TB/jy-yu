@@ -20,16 +20,28 @@ export const LINKS = [
     image: 'https://wx2.sinaimg.cn/large/0089ZZ9mgy1hqzlz62309g308c08cne8.gif',
     value: '7EVN1lVEN',
     path: 'https://music.163.com/#/artist?id=37189432'
-  },
-  // value: '【TOP歌曲】'
-  // value: '【打工记录】'
-  // value: '【小煜语录】'
-  // value: '【二创安利】'
-  // value: '【应援合集】'
-  // value: '【立绘合集】'
-  // value: '【纪念日子】'
-  // value: '【ALL•煜】'
+  }
 ]
+
+export const QR_CODE = [
+  'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg',
+  'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'
+]
+
+export const HOME_CARD = [
+  'https://wx2.sinaimg.cn/large/005SF7JFly1ht3ksydjfvj30uu0ho77c.jpg',
+  'https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg',
+]
+
+export const PERSON_IMAGE = 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'
+
+export const NEW_SONG = {
+  text: '老人与海 美女与野兽 盛放的火焰我自己来庇护',
+  name: '黄昏日落时',
+  currentDuration: '00:52',
+  totalDuration: '03:04',
+  shortLink: '#小程序://网易云音乐听歌/4lDp7JzNjEWPWKw'
+}
 
 export const HOME_SONG_INFO = [
   {

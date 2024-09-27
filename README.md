@@ -10,7 +10,9 @@ dispatch(saveWordDay(data))
 星座运势 https://api.vvhan.com/article/horoscope.html
 开屏/自定义tabBar
 
-//todo
-收集情感问题
-增加语音条
-```
+金数据
+Taro.navigateToMiniProgram({
+  appId: 'wx34b0738d0eef5f78',
+  path: `pages/forms/publish?token=n60WG6`
+})
+```~~~~

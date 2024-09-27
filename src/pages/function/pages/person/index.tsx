@@ -8,19 +8,13 @@ import textImage from '../../../../image/text.png'
 import cx from 'classnames'
 import Bar from "../../../component/pages/bar";
 import { defaultBackground } from '../../../../constants/color'
-import { HOME_SONG_INFO, LINKS } from '../../../../constants/home'
+import { HOME_CARD, HOME_SONG_INFO, LINKS, NEW_SONG, PERSON_IMAGE, QR_CODE } from '../../../../constants/home'
 import { generateUniqueRandomNumbers, getIndex } from '../../../../utils/util'
 
 // const generate = () => HOME_SONG_INFO[generateUniqueRandomNumbers(0, HOME_SONG_INFO.length - 1, 1) as unknown as number]
 // const generate = () => HOME_SONG_INFO[getIndex()]
-const SONG = {
-  text: '老人与海 美女与野兽 盛放的火焰我自己来庇护',
-  name: '黄昏日落时',
-  currentDuration: '00:52',
-  totalDuration: '03:04',
-  shortLink: '#小程序://网易云音乐听歌/4lDp7JzNjEWPWKw'
-}
-const generate = () => SONG
+
+const generate = () => NEW_SONG
 
 function Person() {
   const { name, text, currentDuration, totalDuration, shortLink } = generate()
@@ -79,7 +73,6 @@ function Person() {
   const jumpByShortLink = (item) => {
     Taro.navigateToMiniProgram({
       shortLink: item.shortLink,
-      // appId: 'wx9074de28009e1111',
       // path: `pages/index/index?blog_id=${item.path}`
     })
   }
@@ -96,7 +89,7 @@ function Person() {
       <View className={styles.homeContent}>
         <View className={styles.songWrap}>
           <View className={styles.songInfo}>
-            <Image src={'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'} className={styles.songIcon} style={{ background: defaultBackground }} />
+            <Image src={PERSON_IMAGE} className={styles.songIcon} style={{ background: defaultBackground }} />
             <View className={styles.song}>
               <View className={styles.songText}>{text}</View>
               <View className={styles.songNameWrap}>
@@ -127,12 +120,11 @@ function Person() {
         </View>
         <View className={cx(styles.personInfo, showFront && styles.active)} onClick={() => setShowFront(!showFront)}>
           <Image
-            src={"https://wx2.sinaimg.cn/large/005SF7JFly1ht3ksydjfvj30uu0ho77c.jpg"}
+            src={HOME_CARD[0]}
             className={cx(styles.person, styles.person1)}
             style={{ background: defaultBackground }}
           />
           <Image
-            // src={"https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg"}
             src={happy}
             className={cx(styles.person, styles.person2)}
             style={{ background: defaultBackground }}
@@ -157,14 +149,14 @@ function Person() {
           </View>
           <View className={styles.qrIconWrap}>
             <Image
-              src={'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg'}
+              src={QR_CODE[0]}
               className={styles.qrIcon}
               style={{ background: defaultBackground }}
               showMenuByLongpress
             />
             <Image src={textImage} className={styles.text} />
             <Image
-              src={'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'}
+              src={QR_CODE[1]}
               className={styles.qrIcon}
               style={{ background: defaultBackground }}
               showMenuByLongpress

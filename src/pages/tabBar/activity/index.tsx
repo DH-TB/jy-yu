@@ -6,6 +6,7 @@ import Tab from '../../component/pages/tab';
 import Summary from '../../function/pages/summary';
 import { useShareAppMessage } from '@tarojs/taro';
 import cx from 'classnames'
+import { PERSON_IMAGE } from '../../../constants/home';
 
 const tabs = [
   'J音社', '连麦',
@@ -14,13 +15,12 @@ const tabs = [
 function Activity() {
   const [activeTabIndex, setActiveTabIndex] = useState(0)
   const [open, setOpen] = useState(false)
-  const [openIndex, setOpenIndex] = useState(false)
 
   useShareAppMessage(() => {
     return {
       title: '煜Yu',
       path: '/pages/tabBar/recommendation/index',
-      imageUrl: 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'
+      imageUrl: PERSON_IMAGE
     };
   });
 
