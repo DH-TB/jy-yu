@@ -76,7 +76,7 @@ const Call = (props: { activeTabIndex: number }) => {
               <Image src={image} className={styles.name} />
             </View>
             <View className={styles.inputWrap}>
-              <Input className={styles.input} defaultValue={loveDays().toString()}></Input><Text>天</Text>
+              <Input className={styles.input} defaultValue={loveDays()}></Input><Text>天</Text>
             </View>
           </View>
         </View >

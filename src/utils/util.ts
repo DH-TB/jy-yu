@@ -77,14 +77,14 @@ export const getIndex = () => {
 }
 
 export const isNight = () => {
-  const currentHour = new Date().getHours(); 
-  return currentHour >= 0 && currentHour < 8;  
+  const currentHour = new Date().getHours();
+  return currentHour >= 0 && currentHour < 8;
 }
 
 export const loveDays = () => {
-  const pastDate = new Date('2024-3-10');
+  const pastDate = new Date('2024-03-10');
   const today = new Date();
-  
+
   const timeDiff = today.getTime() - pastDate.getTime();
-  return Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  return Math.floor(timeDiff / (1000 * 60 * 60 * 24)).toString();
 }
