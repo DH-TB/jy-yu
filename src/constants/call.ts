@@ -173,7 +173,7 @@ export const CALLS = [
     {
         song: '《黄昏日落时》',
         text: '日落的黄昏打在脸上🌇煜公主是个artist💫在忘我地演唱💓爱上也是一种点亮🌟',
-        image: 'https://wx4.sinaimg.cn/large/005SF7JFly1hu0zbo4tbsj31xg1xgqv6.jpg',
+        image: 'https://wx1.sinaimg.cn/large/008BWXQOly1hu2dbzji9nj31xg1xgqv6.jpg',
         info: '',
     },
     {

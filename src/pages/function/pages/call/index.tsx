@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Taro, { useDidShow } from '@tarojs/taro'
 import { defaultDarkBackground, randomColor, randomCoverColor } from '../../../../constants/color';
 import { CALLS, CALLS_COMMON, CALLS_OTHER, SPECIAL_WORDS, WORDS } from '../../../../constants/call';
-import { generateUniqueRandomNumbers, handleLongPressSaveImage } from '../../../../utils/util';
+import { generateUniqueRandomNumbers, handleLongPressSaveImage, loveDays } from '../../../../utils/util';
 import image from '../../../../image/day.png';
 import useAudioPlayer from '../../../../hook/audio';
 
@@ -76,7 +76,7 @@ const Call = (props: { activeTabIndex: number }) => {
               <Image src={image} className={styles.name} />
             </View>
             <View className={styles.inputWrap}>
-              <Input className={styles.input}></Input><Text>天</Text>
+              <Input className={styles.input} defaultValue={loveDays().toString()}></Input><Text>天</Text>
             </View>
           </View>
         </View >

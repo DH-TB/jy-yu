@@ -24,16 +24,17 @@ export const LINKS = [
 ]
 
 export const QR_CODE = [
-  'https://wx3.sinaimg.cn/large/005SF7JFly1ht3tmizgbjj30sg0sgjy8.jpg',
-  'https://wx1.sinaimg.cn/large/005SF7JFly1ht3tmio43nj30sg0sgjxr.jpg'
+  'https://wx3.sinaimg.cn/large/008BWXQOly1hu2dbu8lztj30sg0sgafw.jpg',
+  'https://wx1.sinaimg.cn/large/008BWXQOly1hu2dbssi3ej30sg0sg0ya.jpg'
 ]
 
 export const HOME_CARD = [
-  'https://wx2.sinaimg.cn/large/005SF7JFly1ht3ksydjfvj30uu0ho77c.jpg',
-  'https://wx1.sinaimg.cn/large/005SF7JFly1ht3ksy0jvhj30v90hjtd9.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu2dbv7qljj30uu0hoq5x.jpg',
+  'https://wx2.sinaimg.cn/large/008BWXQOly1hu2dbuyjtaj30v90hj78e.jpg',
+  'https://wx4.sinaimg.cn/large/008BWXQOly1hu2dbw7ujbj31nd0v9112.jpg'
 ]
 
-export const PERSON_IMAGE = 'https://wx2.sinaimg.cn/large/005SF7JFly1ht3kue9137j30u00u010l.jpg'
+export const PERSON_IMAGE = 'https://wx1.sinaimg.cn/large/008BWXQOly1hu2dbtp69mj30u00u0qc0.jpg'
 
 export const NEW_SONG = {
   text: '老人与海 美女与野兽 盛放的火焰我自己来庇护',
